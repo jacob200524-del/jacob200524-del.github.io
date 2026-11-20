@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="p:domain_verify" content="5bd41f951888d4c7666f3fd9d5a769f1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Air Fryer on a Budget — crispy, cheap, weeknight recipes under $3.50 a serving. Real ingredients, real times, no deep fryer needed." />
+<link rel="icon" href="data:," />
+<title>Air Fryer on a Budget — Cheap, Crispy Weeknight Recipes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --bg-soft:#fdf6ef; --surface:#ffffff; --surface-2:#fff7ed;
+    --ink:#1c1917; --ink-2:#44403c; --muted:#78716c; --line:#e7e5e4;
+    --accent:#c2410c; --accent-2:#9a3412; --accent-soft:#ffedd5;
+    --green:#15803d; --green-soft:#dcfce7;
+    --gold:#b45309; --gold-soft:#fef3c7;
+    --shadow:0 10px 30px rgba(28,25,23,.08);
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c0a09; --bg-soft:#1c1917; --surface:#1c1917; --surface-2:#292524;
+      --ink:#fafaf9; --ink-2:#d6d3d1; --muted:#a8a29e; --line:#292524;
+      --accent:#fb923c; --accent-2:#fdba74; --accent-soft:#431407;
+      --green:#4ade80; --green-soft:#052e16;
+      --gold:#fbbf24; --gold-soft:#451a03;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:"Lora",Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+  a{color:var(--accent)}
+  button,[role="button"],select,summary,input:not([type="checkbox"]){min-height:44px}
+  button{font:inherit;cursor:pointer}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:18px;color:var(--ink);text-decoration:none}
+  .brand-mark{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:20px;flex:none}
+  .topnav{display:flex;gap:6px;flex-wrap:wrap}
+  .topnav a{color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:600;padding:10px 12px;border-radius:999px}
+  .topnav a:hover{background:var(--surface-2)}
+  .pilot-pill{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:var(--gold);padding:6px 10px;border-radius:999px;white-space:nowrap}
+  /* Hero */
+  .hero{padding:36px 0 28px;background:var(--bg-soft);border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+  .kicker{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+  .hero h1{font-size:clamp(36px,5.2vw,58px);margin:0 0 14px;font-weight:700}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p.lede{font-size:18px;color:var(--ink-2);margin:0 0 20px;max-width:34em}
+  .hero-stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;min-width:118px}
+  .stat b{display:block;font-size:20px;line-height:1.1}
+  .stat span{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+  .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;min-height:48px}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-2)}
+  .btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}
+  .hero-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .hero-img img{width:100%;height:520px;object-fit:cover}
+  .hero-img figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(12,10,9,.82);color:#fff;border-radius:12px;padding:10px 14px;font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .hero-img figcaption b{color:#fdba74}
+  /* Basket strip */
+  .basket{padding:26px 0 6px}
+  .basket-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:20px 22px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center}
+  .basket-card h2{margin:0 0 4px;font-size:22px}
+  .basket-card p{margin:0;color:var(--muted);font-size:14px}
+  .basket-items{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:13px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);padding:7px 11px;border-radius:999px}
+  .basket-total{text-align:right}
+  .basket-total b{font-size:28px;display:block;line-height:1}
+  .basket-total span{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  /* Controls */
+  .controls{padding:28px 0 8px;position:sticky;top:63px;z-index:20;background:var(--bg)}
+  .controls-in{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .search{flex:1 1 240px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:0 16px;background:var(--surface)}
+  .search input{border:0;outline:0;background:transparent;width:100%;font:inherit;color:var(--ink);min-height:46px}
+  .filter-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;min-height:44px}
+  .filter-btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .fav-toggle{margin-left:auto}
+  /* Grid */
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:26px 0 16px;flex-wrap:wrap}
+  .section-head h2{margin:0;font-size:30px}
+  .section-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:10px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+  .card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
+  .card-img img{width:100%;height:100%;object-fit:cover}
+  .badge{position:absolute;top:12px;left:12px;background:#fff;color:#1c1917;font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  .badge.green{background:var(--green);color:#fff}
+  .fav-btn{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.95);font-size:19px;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  .fav-btn.active{background:var(--accent);color:#fff}
+  .card-body{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card-body h3{margin:0;font-size:21px}
+  .card-body p.desc{margin:0;color:var(--ink-2);font-size:14.5px;flex:1}
+  .meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);font-weight:600}
+  .meta b{color:var(--ink)}
+  .cost-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px dashed var(--line);padding-top:12px}
+  .cost b{font-size:20px;color:var(--accent)}
+  .cost span{display:block;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .card-actions{display:flex;gap:8px}
+  .btn-small{padding:10px 14px;min-height:44px;font-size:14px;border-radius:999px}
+  .btn-outline{border:1px solid var(--line);background:var(--surface);color:var(--ink);font-weight:700}
+  /* Detail dialog */
+  dialog{border:0;padding:0;border-radius:20px;max-width:860px;width:calc(100% - 28px);background:var(--surface);color:var(--ink);box-shadow:0 24px 70px rgba(0,0,0,.3)}
+  dialog::backdrop{background:rgba(12,10,9,.6);backdrop-filter:blur(3px)}
+  .dialog-in{max-height:86vh;overflow:auto}
+  .dialog-hero{position:relative}
+  .dialog-hero img{width:100%;height:300px;object-fit:cover}
+  .dialog-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#111;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .dialog-body{padding:22px 24px 26px}
+  .dialog-body h2{margin:0 0 6px;font-size:30px;padding-right:30px}
+  .dialog-body .sub{color:var(--muted);margin:0 0 16px}
+  .fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 18px}
+  .fact{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-align:center}
+  .fact b{display:block;font-size:17px}
+  .fact span{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .scale-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--accent-soft);border-radius:12px;padding:12px 14px;margin:0 0 18px}
+  .scale-row label{font-weight:700;font-size:14px}
+  .scale-btns{display:flex;gap:6px}
+  .scale-btns button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-weight:800;font-size:16px}
+  .scale-num{font-weight:800;font-size:18px;min-width:70px;text-align:center}
+  .two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:24px}
+  .two-col h3{margin:0 0 10px;font-size:18px}
+  .ing-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .ing-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+  .ing-list li label{display:flex;gap:10px;cursor:pointer;align-items:flex-start;min-height:36px}
+  .ing-list input{width:20px;height:20px;margin-top:2px;accent-color:var(--accent);flex:none}
+  .steps{margin:0;padding-left:22px;display:grid;gap:12px;font-size:15px;color:var(--ink-2)}
+  .steps li::marker{font-weight:800;color:var(--accent)}
+  .tip-box{margin-top:18px;background:var(--gold-soft);border-radius:12px;padding:14px 16px;font-size:14px}
+  .tip-box b{color:var(--gold)}
+  .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  /* Lower sections */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:34px 0 8px}
+  .panel{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface)}
+  .panel h2{margin:0 0 6px;font-size:24px}
+  .panel p.intro{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .tip-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .tip-list li{display:flex;gap:12px}
+  .tip-num{width:32px;height:32px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:800;display:grid;place-items:center;flex:none;font-size:14px}
+  .tip-list b{display:block;font-size:15px}
+  .tip-list span{font-size:14px;color:var(--ink-2)}
+  .gear-list{display:grid;gap:12px}
+  .gear{display:flex;gap:14px;border:1px solid var(--line);border-radius:14px;padding:14px}
+  .gear-icon{font-size:26px;width:48px;height:48px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;flex:none}
+  .gear b{display:block;font-size:15px}
+  .gear p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2)}
+  .gear .price{margin-left:auto;text-align:right;flex:none}
+  .gear .price b{color:var(--accent);font-size:16px}
+  .gear .price span{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  /* Grocery drawer */
+  .grocery{margin:30px 0 0;border:1.5px dashed var(--accent);border-radius:var(--radius);padding:22px;background:var(--surface-2)}
+  .grocery h2{margin:0 0 4px;font-size:24px}
+  .grocery p{margin:0 0 14px;color:var(--muted);font-size:14px}
+  #groceryList{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 22px;margin:0 0 16px}
+  #groceryList:empty{display:none}
+  .g-item{display:flex;justify-content:space-between;gap:10px;font-size:14px;border-bottom:1px dashed var(--line);padding:7px 0}
+  .empty-note{font-size:14px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:14px}
+  /* FAQ + footer */
+  .faq{padding:36px 0 10px;max-width:760px}
+  .faq h2{font-size:28px;margin:0 0 14px}
+  details{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin-bottom:10px;background:var(--surface)}
+  summary{font-weight:700;cursor:pointer;padding:12px 0;min-height:44px;display:flex;align-items:center}
+  details p{margin:0 0 14px;color:var(--ink-2);font-size:14.5px}
+  footer{border-top:1px solid var(--line);margin-top:36px;padding:26px 0 40px;color:var(--muted);font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,80px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:60;transition:transform .25s ease;box-shadow:var(--shadow);max-width:calc(100% - 32px);text-align:center}
+  .toast.show{transform:translate(-50%,0)}
+  .no-results{grid-column:1/-1;text-align:center;padding:44px 20px;border:1px dashed var(--line);border-radius:var(--radius);color:var(--muted)}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-img img{height:340px}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .split{grid-template-columns:1fr}
+    .basket-card{grid-template-columns:1fr}
+    .basket-total{text-align:left}
+    .controls{top:61px}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr}
+    .topnav{display:none}
+    .fact-grid{grid-template-columns:repeat(2,1fr)}
+    .two-col{grid-template-columns:1fr}
+    #groceryList{grid-template-columns:1fr}
+    .hero{padding-top:24px}
+    .fav-toggle{margin-left:0}
+  }
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .toast{transition:none} }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">🍗</span> Air Fryer on a Budget</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#recipes">Recipes</a>
+      <a href="#tips">Budget Tips</a>
+      <a href="#gear">Starter Gear</a>
+      <a href="#grocery">Grocery List</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="pilot-pill">Pilot · Week 1</span>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Crispy food · Tiny grocery bill</p>
+        <h1>Restaurant-crisp dinners, <em>under $3.50</em> a plate.</h1>
+        <p class="lede">Fourteen tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
+        <div class="hero-stats" aria-label="Site highlights">
+          <div class="stat"><b>14</b><span>Launch recipes</span></div>
+          <div class="stat"><b>8–25 min</b><span>Cook time range</span></div>
+          <div class="stat"><b>$1.40–$3.40</b><span>Cost per serving*</span></div>
+          <div class="stat"><b>400°F</b><span>Does most of the work</span></div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#recipes">Browse the recipes ↓</a>
+          <a class="btn btn-ghost" href="#grocery">Build my grocery list</a>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Your store will vary — the method won't.</p>
+      </div>
+      <figure class="hero-img" style="margin:0">
+        <img src="images/img-1.webp" alt="Golden, crispy air fryer chicken tenders on a white plate with dipping sauce and parsley" />
+        <figcaption><span>⭐ Start here: Garlic Parmesan Chicken Tenders</span><b>$2.10 / serving · 12 min</b></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WEEKLY BASKET -->
+  <section class="wrap basket" aria-label="Weekly basket">
+    <div class="basket-card">
+      <div>
+        <h2>🧺 One basket, seven dinners</h2>
+        <p>Buy this once and every recipe below is covered. That's the whole trick — overlap, not more shopping.</p>
+      </div>
+      <div class="basket-items">
+        <span class="chip">Chicken breast / tenders 3 lb</span>
+        <span class="chip">Chicken wings 2 lb</span>
+        <span class="chip">Salmon fillets 1 lb</span>
+        <span class="chip">Russet potatoes 5 lb</span>
+        <span class="chip">Broccoli 2 heads</span>
+        <span class="chip">Chickpeas 2 cans</span>
+        <span class="chip">Eggs 1 dozen</span>
+        <span class="chip">White fish 1 lb</span>
+        <span class="chip">Tortillas + cabbage</span>
+        <span class="chip">Rice 2 lb</span>
+        <span class="chip">Bell pepper + onion</span>
+        <span class="chip">Tahini + lemon &amp; lime</span>
+        <span class="chip">Pantry: panko, parmesan, spices, sauces</span>
+      </div>
+      <div class="basket-total"><b>≈ $44</b><span>Feeds 4 · 7 meals</span></div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <div class="wrap controls" id="recipes">
+    <div class="controls-in" role="group" aria-label="Filter recipes">
+      <label class="search"><span aria-hidden="true">🔎</span><input id="searchInput" type="search" placeholder="Search recipes, ingredients…" aria-label="Search recipes" /></label>
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="chicken" aria-pressed="false">Chicken</button>
+      <button class="filter-btn" data-filter="seafood" aria-pressed="false">Seafood</button>
+      <button class="filter-btn" data-filter="veggie" aria-pressed="false">Veggie</button>
+      <button class="filter-btn" data-filter="breakfast" aria-pressed="false">Breakfast</button>
+      <button class="filter-btn" data-filter="fast" aria-pressed="false">≤ 15 min</button>
+      <button class="filter-btn" data-filter="cheap" aria-pressed="false">Under $2</button>
+      <button class="filter-btn fav-toggle" id="favToggle" aria-pressed="false">♥ Saved (<span id="favCount">0</span>)</button>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <section class="wrap">
+    <div class="section-head">
+      <div><h2>This week's recipes</h2><p id="resultCount">6 recipes · tap a card for full ingredients &amp; steps</p></div>
+    </div>
+    <div class="grid" id="recipeGrid"></div>
+  </section>
+
+  <!-- GROCERY -->
+  <section class="wrap" id="grocery">
+    <div class="grocery">
+      <h2>🛒 Your grocery list</h2>
+      <p>Add ingredients from any recipe and we'll merge duplicates. Copy it, take it to the store, done.</p>
+      <div class="empty-note" id="groceryEmpty">Nothing added yet — open a recipe and tap “Add all ingredients.”</div>
+      <div id="groceryList" aria-live="polite"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary btn-small" id="copyGrocery">Copy list</button>
+        <button class="btn btn-outline btn-small" id="clearGrocery">Clear list</button>
+        <span id="groceryTotal" style="align-self:center;font-weight:700"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS + GEAR -->
+  <section class="wrap split" id="tips">
+    <div class="panel">
+      <h2>💡 The 5 rules that keep it cheap</h2>
+      <p class="intro">Air frying saves money only if you shop for it on purpose. These are the rules every recipe here follows.</p>
+      <ul class="tip-list">
+        <li><span class="tip-num">1</span><div><b>Buy overlap, not recipes</b><span>One protein + one starch + one veg should cover 2–3 meals. If an ingredient appears once, skip the recipe.</span></div></li>
+        <li><span class="tip-num">2</span><div><b>Frozen is your friend</b><span>Frozen wings, fish, and broccoli air-fry beautifully and cost 30–50% less than fresh. Thaw, pat very dry, season.</span></div></li>
+        <li><span class="tip-num">3</span><div><b>Never crowd the basket</b><span>One layer, space between pieces. Crowding steams food — that's how you end up ordering takeout anyway.</span></div></li>
+        <li><span class="tip-num">4</span><div><b>Shake or flip at halfway</b><span>Set a timer. The flip is the difference between “pretty good” and the photo on Pinterest.</span></div></li>
+        <li><span class="tip-num">5</span><div><b>Season after, sauce last</b><span>Sugary sauces burn at 400°F. Cook seasoned, toss in sauce in the last 2 minutes or right after.</span></div></li>
+      </ul>
+    </div>
+    <div class="panel" id="gear">
+      <h2>🍳 Starter gear that actually matters</h2>
+      <p class="intro">You need four things. Everything else is optional — buy it only after week two if you're still cooking.</p>
+      <div class="gear-list">
+        <div class="gear"><span class="gear-icon">♨️</span><div><b>5–6 qt basket air fryer</b><p>Big enough for a family batch in one layer. Smaller = more batches = you quit by Thursday.</p></div><div class="price"><b>$60–90</b><span>Typical range</span></div></div>
+        <div class="gear"><span class="gear-icon">🌡️</span><div><b>Instant-read thermometer</b><p>Chicken at 165°F, salmon at 125–130°F. Guessing is how cheap chicken becomes expensive takeout.</p></div><div class="price"><b>$12–16</b><span>Typical range</span></div></div>
+        <div class="gear"><span class="gear-icon">🧴</span><div><b>Oil spray bottle (refillable)</b><p>A light mist = crisp coating for pennies. Aerosol propellants can damage nonstick baskets — refillable wins.</p></div><div class="price"><b>$8–12</b><span>Typical range</span></div></div>
+        <div class="gear"><span class="gear-icon">🥄</span><div><b>Silicone-tipped tongs</b><p>For the halfway flip without shredding the coating or scratching the basket.</p></div><div class="price"><b>$7–10</b><span>Typical range</span></div></div>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:14px 0 0">Pilot note: affiliate links aren't live yet. Prices above are typical U.S. retail ranges to help you budget — check your store before you buy.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap faq" id="faq">
+    <h2>Quick questions</h2>
+    <details><summary>Do I need to preheat the air fryer?</summary><p>For breaded foods and anything you want truly crisp — yes, 3–5 minutes at cooking temperature. For vegetables and reheating leftovers, you can skip it and add 2 minutes.</p></details>
+    <details><summary>Can I cook frozen chicken directly?</summary><p>Wings and tenders, yes — add about 50% more time and season after the surface thaws (around the halfway flip). Whole breasts are better thawed so the outside doesn't burn before the center cooks. Always verify 165°F inside.</p></details>
+    <details><summary>Why isn't my food crispy?</summary><p>Almost always one of three things: the basket was crowded, the food was wet (pat it dry!), or there was no oil at all. A light spray matters — air alone can't brown a dry coating.</p></details>
+    <details><summary>Are these costs real?</summary><p>They're careful estimates from typical U.S. supermarket shelf prices (store brands, family packs), calculated per serving in November 2026. Salmon and fish swing the most by region and season — when they're pricey, swap in the chicken or chickpea recipes that week.</p></details>
+    <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has fourteen. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b style="color:var(--ink)">Air Fryer on a Budget</b> — a pilot recipe project. Cook it, pin it, tell us what to make cheaper.</span>
+    <span>Recipes tested at 400°F unless noted · Costs are estimates, Nov 2026</span>
+  </div>
+</footer>
+
+<!-- RECIPE DIALOG -->
+<dialog id="recipeDialog" aria-labelledby="dlgTitle">
+  <div class="dialog-in">
+    <div class="dialog-hero">
+      <img id="dlgImg" src="images/img-1.webp" alt="Recipe photo" />
+      <button class="dialog-close" id="dlgClose" aria-label="Close recipe">✕</button>
+    </div>
+    <div class="dialog-body">
+      <h2 id="dlgTitle"></h2>
+      <p class="sub" id="dlgDesc"></p>
+      <div class="fact-grid">
+        <div class="fact"><b id="dlgTime"></b><span>Total time</span></div>
+        <div class="fact"><b id="dlgTemp"></b><span>Air fryer</span></div>
+        <div class="fact"><b id="dlgCost"></b><span>Per serving</span></div>
+        <div class="fact"><b id="dlgCal"></b><span>Calories*</span></div>
+      </div>
+      <div class="scale-row">
+        <label for="servNum">Servings</label>
+        <div class="scale-btns">
+          <button id="servMinus" aria-label="Fewer servings">−</button>
+          <span class="scale-num" id="servNum">4</span>
+          <button id="servPlus" aria-label="More servings">+</button>
+        </div>
+        <span style="font-size:13px;color:var(--ink-2)">Ingredients scale automatically.</span>
+        <button class="btn btn-primary btn-small" id="addAllBtn" style="margin-left:auto">＋ Add all to grocery list</button>
+      </div>
+      <div class="two-col">
+        <div><h3>Ingredients</h3><ul class="ing-list" id="dlgIng"></ul></div>
+        <div><h3>Method</h3><ol class="steps" id="dlgSteps"></ol>
+          <div class="tip-box" id="dlgTip"></div>
+        </div>
+      </div>
+      <div class="dialog-actions">
+        <button class="btn btn-ghost btn-small" id="copyFullBtn">📋 Copy full recipe</button>
+        <button class="btn btn-ghost btn-small" id="copyBtn">Copy ingredients</button>
+        <span style="font-size:12px;color:var(--muted);align-self:center">*Nutrition is an estimate per serving.</span>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var RECIPES = [
+  {
+    id:"tenders", title:"Garlic Parmesan Chicken Tenders", cat:"chicken", img:"images/img-1.webp",
+    alt:"Golden crispy air fryer chicken tenders with dipping sauce",
+    desc:"The one that started this site. Crunchy panko-parm crust, juicy inside, and a 2-minute honey-mustard dip. Kids inhale them; adults pretend they made extra “for the kids.”",
+    time:22, cook:12, temp:"400°F", cost:2.10, cal:310, servings:4, badge:"Most pinned",
+    ingredients:[
+      {n:"Chicken tenders", q:1.5, u:"lb", price:5.25},
+      {n:"Panko breadcrumbs", q:1, u:"cup", price:0.60},
+      {n:"Grated parmesan", q:0.5, u:"cup", price:0.90},
+      {n:"Eggs", q:2, u:"", price:0.50},
+      {n:"All-purpose flour", q:0.5, u:"cup", price:0.15},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Smoked paprika", q:1, u:"tsp", price:0.05},
+      {n:"Salt & black pepper", q:1, u:"tsp total", price:0.05}
+    ],
+    steps:[
+      "Preheat air fryer to 400°F for 4 minutes. Pat tenders completely dry — this is the crispiness step, don't skip it.",
+      "Set up three bowls: flour with half the salt; beaten eggs; panko mixed with parmesan, garlic powder, paprika, and remaining salt.",
+      "Dredge each tender flour → egg → panko, pressing the crumbs on firmly.",
+      "Spray basket and tenders lightly with oil. Arrange in a single layer with space between pieces (cook in 2 batches if needed).",
+      "Air fry 6 minutes, flip, spray again, then 5–6 more minutes until deeply golden and 165°F inside.",
+      "Rest 2 minutes. Serve with honey-mustard (2 tbsp mustard + 1 tbsp honey + 1 tbsp mayo) or whatever dip is already in the fridge door."
+    ],
+    tip:"<b>Budget tip:</b> Whole chicken breast sliced into strips costs about $1 less per pound than pre-cut tenders — 3 minutes of knife work pays for the parmesan."
+  },
+  {
+    id:"salmon", title:"Crispy Salmon Bites with Bang-Bang Sauce", cat:"seafood", img:"images/img-2.webp",
+    alt:"Crispy air fryer salmon bites in a bowl with sauce",
+    desc:"Eight minutes, caramelized edges, creamy-spicy sauce. This is the “salmon is too expensive to mess up” recipe — the air fryer makes it nearly impossible to overcook.",
+    time:18, cook:8, temp:"400°F", cost:3.40, cal:340, servings:4, badge:"Date-night cheap",
+    ingredients:[
+      {n:"Salmon fillets, skin removed, cubed", q:1, u:"lb", price:8.00},
+      {n:"Cornstarch", q:1, u:"tbsp", price:0.05},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Paprika", q:1, u:"tsp", price:0.05},
+      {n:"Mayonnaise", q:0.25, u:"cup", price:0.30},
+      {n:"Sweet chili sauce", q:2, u:"tbsp", price:0.25},
+      {n:"Sriracha", q:1, u:"tsp", price:0.05},
+      {n:"Cooked rice, to serve", q:2, u:"cups", price:0.60}
+    ],
+    steps:[
+      "Pat salmon cubes very dry. Toss with cornstarch, garlic powder, paprika, salt, and a spray of oil until lightly coated.",
+      "Preheat to 400°F. Place cubes in a single layer, not touching.",
+      "Air fry 7–8 minutes, shaking once at halfway, until edges caramelize and centers are just opaque (125–130°F).",
+      "Whisk mayo, sweet chili sauce, and sriracha. Drizzle over bites or serve on the side for dipping.",
+      "Serve over rice with any cheap green you have — cucumber, cabbage slaw, or frozen peas all work."
+    ],
+    tip:"<b>Budget tip:</b> Buy the family pack of salmon when it's on sale, cube and freeze in portions. Thawed frozen salmon works perfectly here because the sauce covers any texture difference."
+  },
+  {
+    id:"wedges", title:"Copycat Seasoned Potato Wedges", cat:"veggie", img:"images/img-3.webp",
+    alt:"Golden seasoned air fryer potato wedges",
+    desc:"Five pounds of russets cost less than one drive-thru large fries. These wedges — fluffy middle, shattering edges, fast-food seasoning blend — are the cheapest win on the site.",
+    time:30, cook:20, temp:"380°F", cost:1.40, cal:210, servings:4, badge:"Cheapest recipe",
+    ingredients:[
+      {n:"Russet potatoes, cut into wedges", q:2, u:"lb", price:1.20},
+      {n:"Olive oil", q:1.5, u:"tbsp", price:0.20},
+      {n:"Smoked paprika", q:1, u:"tsp", price:0.05},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Onion powder", q:0.5, u:"tsp", price:0.03},
+      {n:"Salt", q:1, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.5, u:"tsp", price:0.03}
+    ],
+    steps:[
+      "Soak wedges in cold water 20 minutes (or as long as you have). Drain and dry thoroughly — wet potatoes steam.",
+      "Toss with oil and all seasonings until every wedge is coated.",
+      "Air fry at 380°F for 18–20 minutes in a single layer, shaking the basket at 7 and 14 minutes.",
+      "For extra crunch, finish with 2 minutes at 400°F.",
+      "Salt again while hot. Serve with ketchup, ranch, or the leftover bang-bang sauce from the salmon bites."
+    ],
+    tip:"<b>Budget tip:</b> No soaking time? Microwave the wedges 4 minutes first. Same fluffy center, half the patience required."
+  },
+  {
+    id:"wings", title:"Extra-Crispy Chicken Wings (Baking Powder Trick)", cat:"chicken", img:"images/img-4.webp",
+    alt:"Crispy air fryer chicken wings piled on a plate",
+    desc:"One teaspoon of baking powder is the whole secret — it raises the skin's pH so it blisters and crisps like it was deep-fried. Toss in sauce after cooking, never before.",
+    time:35, cook:25, temp:"400°F", cost:2.60, cal:380, servings:4, badge:"Game day",
+    ingredients:[
+      {n:"Chicken wings, split", q:2, u:"lb", price:6.00},
+      {n:"Baking powder (aluminum-free)", q:1, u:"tbsp", price:0.08},
+      {n:"Salt", q:1, u:"tsp", price:0.02},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Buffalo or BBQ sauce", q:0.33, u:"cup", price:0.70},
+      {n:"Butter, melted (optional)", q:1, u:"tbsp", price:0.12}
+    ],
+    steps:[
+      "Pat wings bone-dry with paper towels. The drier the skin, the louder the crunch.",
+      "Toss with baking powder, salt, and garlic powder until evenly dusted.",
+      "Arrange in a single layer. Air fry at 400°F for 12 minutes.",
+      "Flip every wing, then cook 10–13 more minutes until skin is deep golden and crackly (165°F+).",
+      "Toss hot wings in warmed sauce (plus melted butter for buffalo). Serve immediately — wings wait for no one."
+    ],
+    tip:"<b>Budget tip:</b> Whole wings are cheaper than pre-split party wings. Splitting at the joint takes 30 seconds per wing with kitchen shears."
+  },
+  {
+    id:"broccoli", title:"Crispy Broccoli & Chickpeas with Tahini Drizzle", cat:"veggie", img:"images/img-5.webp",
+    alt:"Roasted air fryer broccoli and crispy chickpeas",
+    desc:"The $1.80 dinner that eats like a $14 grain bowl. Chickpeas go crunchy, broccoli chars at the edges, and a lemony tahini drizzle makes it a meal over rice or straight from the tray.",
+    time:22, cook:15, temp:"390°F", cost:1.80, cal:290, servings:4, badge:"Meatless Monday",
+    ingredients:[
+      {n:"Chickpeas, drained & dried", q:2, u:"cans (15 oz)", price:1.70},
+      {n:"Broccoli florets", q:4, u:"cups", price:1.80},
+      {n:"Olive oil", q:2, u:"tbsp", price:0.27},
+      {n:"Smoked paprika", q:1, u:"tsp", price:0.05},
+      {n:"Cumin", q:1, u:"tsp", price:0.05},
+      {n:"Tahini", q:3, u:"tbsp", price:0.55},
+      {n:"Lemon juice", q:1, u:"tbsp", price:0.15},
+      {n:"Cooked rice or quinoa, to serve", q:2, u:"cups", price:0.60}
+    ],
+    steps:[
+      "Dry chickpeas really well — roll them in a clean towel for 5 minutes. Rub off loose skins for maximum crunch.",
+      "Toss chickpeas and broccoli with oil, paprika, cumin, and salt.",
+      "Air fry at 390°F for 14–15 minutes, shaking twice, until chickpeas are crisp and broccoli edges char.",
+      "Whisk tahini, lemon juice, a pinch of salt, and warm water 1 tbsp at a time until pourable.",
+      "Pile over rice, drizzle generously, and finish with chili flakes if you have them."
+    ],
+    tip:"<b>Budget tip:</b> Frozen broccoli works at half the price — thaw, squeeze dry in a towel, and add 2 extra minutes."
+  },
+  {
+    id:"breakfast", title:"Crispy Breakfast Potatoes & Jammy Eggs", cat:"breakfast", img:"images/img-6.webp",
+    alt:"Crispy air fryer breakfast potatoes on a plate",
+    desc:"Diner home fries without the diner bill — or the skillet splatter. Potatoes crisp in the basket while eggs cook in ramekins right alongside. Weekend breakfast for about a dollar fifty.",
+    time:25, cook:18, temp:"400°F", cost:1.55, cal:320, servings:4, badge:"Weekend hero",
+    ingredients:[
+      {n:"Russet or Yukon potatoes, cubed", q:1.5, u:"lb", price:0.90},
+      {n:"Bell pepper, diced", q:1, u:"", price:0.80},
+      {n:"Yellow onion, diced", q:0.5, u:"", price:0.35},
+      {n:"Olive oil", q:1.5, u:"tbsp", price:0.20},
+      {n:"Smoked paprika", q:1, u:"tsp", price:0.05},
+      {n:"Eggs", q:8, u:"", price:2.00}
+    ],
+    steps:[
+      "Toss potatoes, pepper, and onion with oil, paprika, salt, and pepper.",
+      "Air fry at 400°F for 15–18 minutes, shaking every 5 minutes, until potatoes are crisp and golden.",
+      "Meanwhile, crack 2 eggs into each of 4 greased ramekins (or cook eggs any style on the stove — dealer's choice).",
+      "In the last 6–7 minutes, nestle ramekins into the basket alongside the potatoes for jammy yolks (8–9 minutes for firmer).",
+      "Season eggs with salt, pepper, and hot sauce. Serve potatoes under or beside — with toast for sopping."
+    ],
+    tip:"<b>Budget tip:</b> Leftover baked potatoes from dinner cube and crisp in 10 minutes flat the next morning. Cook extra on purpose."
+  },
+  {
+    id:"tacos", title:"Crispy Fish Tacos", cat:"seafood", img:"images/img-7.webp",
+    alt:"Crispy air fryer fish tacos with cabbage slaw",
+    desc:"Cheap white fish, a crunchy slaw, warm tortillas. The fish cooks in 8 minutes and tastes like the $5-a-taco truck version — because the truck is doing basically this.",
+    time:20, cook:8, temp:"400°F", cost:3.10, cal:360, servings:4, badge:"Ready in 20",
+    ingredients:[
+      {n:"White fish fillets (tilapia or cod)", q:1, u:"lb", price:6.50},
+      {n:"Panko breadcrumbs", q:0.75, u:"cup", price:0.45},
+      {n:"Chili powder", q:1, u:"tsp", price:0.05},
+      {n:"Corn tortillas", q:8, u:"", price:0.90},
+      {n:"Cabbage, shredded", q:2, u:"cups", price:0.70},
+      {n:"Mayonnaise", q:3, u:"tbsp", price:0.22},
+      {n:"Lime, cut into wedges", q:1, u:"", price:0.50}
+    ],
+    steps:[
+      "Cut fish into taco-size strips. Season with chili powder, salt, and pepper, then press into panko on all sides.",
+      "Spray with oil. Air fry at 400°F for 7–8 minutes, flipping once, until crisp and flaky (145°F).",
+      "Toss cabbage with mayo, lime juice, and a pinch of salt and sugar for a 60-second slaw.",
+      "Warm tortillas directly in the hot basket for 1 minute after the fish comes out.",
+      "Build: tortilla → slaw → fish → extra lime and hot sauce. Eat over the plate — they drip, gloriously."
+    ],
+    tip:"<b>Budget tip:</b> Frozen tilapia is the cheapest reliable option and thaws in 15 minutes under cold water. Pat it extra dry before breading."
+  },
+  {
+    id:"shrimp", title:"Garlic Butter Air Fryer Shrimp", cat:"seafood", img:"images/img-8.webp",
+    alt:"Garlic butter air fryer shrimp over rice with lemon and parsley",
+    desc:"Buttery, garlicky shrimp in just 10 minutes — the fastest dinner on the site. Toss, air fry, squeeze lemon, done. Serve over rice or with crusty bread to soak up the garlic butter.",
+    time:10, cook:8, temp:"400°F", cost:3.10, cal:280, servings:4, badge:"10 minutes flat",
+    ingredients:[
+      {n:"Large shrimp, peeled and deveined", q:1, u:"lb", price:9.0},
+            {n:"Butter, melted", q:2, u:"tbsp", price:0.6},
+            {n:"Garlic cloves, minced", q:3, u:"cloves", price:0.3},
+            {n:"Paprika", q:1, u:"tsp", price:0.05},
+            {n:"Salt", q:0.5, u:"tsp", price:0.02},
+            {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+            {n:"Lemon juice", q:1, u:"tbsp", price:0.6},
+            {n:"Chopped parsley", q:1, u:"tbsp", price:0.3},
+            {n:"Cooked rice, to serve", q:2, u:"cups", price:0.6}
+    ],
+    steps:[
+      "Pat the shrimp dry and toss with melted butter, garlic, paprika, salt, and pepper.",
+            "Spread in a single layer in the air fryer basket.",
+            "Air fry at 400°F for 8 minutes, shaking the basket halfway through.",
+            "Squeeze lemon juice over the top, sprinkle with parsley, and serve.",
+            "Serve over rice or with crusty bread to soak up the garlic butter."
+    ],
+    tip:"<b>Budget tip:</b> Frozen raw shrimp is often half the price of fresh — thaw under cold water for 10 minutes and pat very dry before seasoning."
+  },
+  {
+    id:"porkchops", title:"Crispy Air Fryer Pork Chops", cat:"pork", img:"images/img-9.webp",
+    alt:"Golden breaded air fryer pork chops on a plate with lemon",
+    desc:"Golden, crunchy pork chops in 18 minutes for under $10 — no deep frying, no mess. A panko-Parmesan crust that stays crisp if you let them rest before cutting in.",
+    time:18, cook:17, temp:"400°F", cost:2.80, cal:390, servings:4, badge:"Crispy & juicy",
+    ingredients:[
+      {n:"Boneless pork chops, about 3/4 inch thick", q:4, u:"", price:7.5},
+            {n:"Panko breadcrumbs", q:0.5, u:"cup", price:0.3},
+            {n:"Grated Parmesan", q:0.25, u:"cup", price:0.45},
+            {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+            {n:"Paprika", q:1, u:"tsp", price:0.05},
+            {n:"Salt", q:0.5, u:"tsp", price:0.02},
+            {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+            {n:"Egg, beaten", q:1, u:"", price:0.25},
+            {n:"Cooking spray", q:1, u:"", price:0.1}
+    ],
+    steps:[
+      "Mix panko, Parmesan, garlic powder, paprika, salt, and pepper in a shallow bowl.",
+            "Dip each pork chop in beaten egg, then press into the breadcrumb mix.",
+            "Spray the basket and the chops lightly with cooking spray.",
+            "Air fry at 400°F for 16–18 minutes, flipping once, until golden and cooked through.",
+            "Rest 3 minutes before serving so the coating stays crisp."
+    ],
+    tip:"<b>Budget tip:</b> Buy the family pack of boneless chops and freeze the extras in pairs — they thaw in the fridge overnight and cook exactly the same."
+  },
+  {
+    id:"meatballs", title:"Air Fryer Italian Meatballs", cat:"beef", img:"images/img-10.webp",
+    alt:"Italian meatballs in marinara sauce with parmesan and basil",
+    desc:"Juicy Italian meatballs in marinara in 15 minutes — browned outside, tender inside, under $10 for the family. Spoon over pasta or pile into rolls.",
+    time:15, cook:13, temp:"380°F", cost:2.20, cal:350, servings:4, badge:"Family favorite",
+    ingredients:[
+      {n:"Ground beef", q:1, u:"lb", price:5.0},
+            {n:"Breadcrumbs", q:0.33, u:"cup", price:0.2},
+            {n:"Grated Parmesan", q:0.25, u:"cup", price:0.45},
+            {n:"Egg", q:1, u:"", price:0.25},
+            {n:"Garlic cloves, minced", q:2, u:"cloves", price:0.2},
+            {n:"Italian seasoning", q:1, u:"tsp", price:0.05},
+            {n:"Salt", q:0.5, u:"tsp", price:0.02},
+            {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+            {n:"Marinara sauce, to serve", q:1, u:"cup", price:0.9}
+    ],
+    steps:[
+      "Mix beef, breadcrumbs, Parmesan, egg, garlic, Italian seasoning, salt, and pepper.",
+            "Roll into 16 even meatballs, about golf-ball size.",
+            "Place in the air fryer basket with space between each one.",
+            "Air fry at 380°F for 12–14 minutes, shaking once, until browned and cooked through.",
+            "Warm the marinara, spoon over the meatballs, and serve over pasta or in rolls."
+    ],
+    tip:"<b>Budget tip:</b> Double the batch and freeze half raw on a tray — frozen meatballs go straight into the air fryer, just add 3–4 minutes."
+  },
+  {
+    id:"tofu", title:"Honey Garlic Air Fryer Tofu Bites", cat:"veggie", img:"images/img-11.webp",
+    alt:"Honey garlic tofu bites over rice with sesame and green onions",
+    desc:"Crispy honey garlic tofu bites in 18 minutes — high-protein, cheap, and even the kids go back for seconds. The cornstarch coating is what makes them crunch.",
+    time:18, cook:17, temp:"400°F", cost:1.60, cal:260, servings:4, badge:"Meatless Monday",
+    ingredients:[
+      {n:"Extra-firm tofu, pressed and cubed", q:1, u:"block (14 oz)", price:2.0},
+            {n:"Soy sauce", q:2, u:"tbsp", price:0.15},
+            {n:"Honey", q:1, u:"tbsp", price:0.2},
+            {n:"Cornstarch", q:1, u:"tbsp", price:0.05},
+            {n:"Garlic cloves, minced", q:2, u:"cloves", price:0.2},
+            {n:"Sesame oil", q:1, u:"tsp", price:0.15},
+            {n:"Sesame seeds", q:1, u:"tbsp", price:0.15},
+            {n:"Green onions, sliced", q:2, u:"", price:0.4},
+            {n:"Cooked rice, to serve", q:2, u:"cups", price:0.6}
+    ],
+    steps:[
+      "Toss tofu cubes with soy sauce, honey, garlic, and sesame oil.",
+            "Sprinkle with cornstarch and toss again until evenly coated.",
+            "Spread in a single layer in the air fryer basket.",
+            "Air fry at 400°F for 16–18 minutes, shaking halfway, until golden and crisp.",
+            "Sprinkle with sesame seeds and green onions and serve over rice."
+    ],
+    tip:"<b>Budget tip:</b> Press the tofu properly — 15 minutes under a plate with a can on top. Dry tofu crisps; wet tofu steams."
+  },
+  {
+    id:"fajitas", title:"Air Fryer Chicken Fajitas", cat:"chicken", img:"images/img-12.webp",
+    alt:"Chicken fajitas with peppers and onions in a skillet with tortillas",
+    desc:"Sizzling chicken fajitas with peppers and onions in 15 minutes — a one-basket weeknight dinner under $10. Warm the tortillas in the basket while the filling rests.",
+    time:15, cook:13, temp:"400°F", cost:2.90, cal:340, servings:4, badge:"Taco Tuesday",
+    ingredients:[
+      {n:"Chicken breast, sliced into strips", q:1, u:"lb", price:4.5},
+            {n:"Bell peppers, sliced", q:2, u:"", price:1.6},
+            {n:"Onion, sliced", q:1, u:"", price:0.5},
+            {n:"Olive oil", q:2, u:"tbsp", price:0.27},
+            {n:"Fajita seasoning", q:1, u:"tbsp", price:0.15},
+            {n:"Salt", q:0.5, u:"tsp", price:0.02},
+            {n:"Small flour tortillas", q:8, u:"", price:1.2},
+            {n:"Lime wedges and sour cream, to serve", q:1, u:"", price:0.8}
+    ],
+    steps:[
+      "Toss chicken, peppers, and onion with olive oil, fajita seasoning, and salt.",
+            "Spread in a single layer in the air fryer basket.",
+            "Air fry at 400°F for 12–14 minutes, shaking once, until the chicken is cooked through.",
+            "Warm the tortillas for 1 minute in the air fryer while the filling rests.",
+            "Fill tortillas with the chicken and peppers, add lime and sour cream, and serve."
+    ],
+    tip:"<b>Budget tip:</b> Buy the bag of mixed frozen pepper strips when fresh peppers are pricey — thaw, pat dry, and they sizzle the same."
+  },
+  {
+    id:"quesadillas", title:"Cheesy Air Fryer Bean Quesadillas", cat:"veggie", img:"images/img-13.webp",
+    alt:"Cheesy black bean quesadilla wedges with salsa and sour cream",
+    desc:"Crispy, cheesy bean quesadillas in 10 minutes for under $10 — the cheapest dinner on the site, and the fastest. Mash half the beans so the filling holds together.",
+    time:10, cook:9, temp:"380°F", cost:1.40, cal:330, servings:4, badge:"Cheapest & fastest",
+    ingredients:[
+      {n:"Small flour tortillas", q:8, u:"", price:1.2},
+            {n:"Black beans, drained and rinsed", q:1, u:"can (15 oz)", price:0.9},
+            {n:"Shredded cheddar cheese", q:1.5, u:"cups", price:1.5},
+            {n:"Salsa", q:0.5, u:"cup", price:0.6},
+            {n:"Cumin", q:1, u:"tsp", price:0.05},
+            {n:"Cooking spray", q:1, u:"", price:0.1},
+            {n:"Sour cream, to serve", q:1, u:"", price:0.5}
+    ],
+    steps:[
+      "Mash half the black beans with cumin; leave the rest whole.",
+            "Spread beans, salsa, and cheese over 4 tortillas, then top with the remaining tortillas.",
+            "Spray both sides lightly with cooking spray.",
+            "Air fry at 380°F for 8–10 minutes, flipping once, until golden and the cheese melts.",
+            "Cut into wedges and serve with sour cream and extra salsa."
+    ],
+    tip:"<b>Budget tip:</b> A can of beans and a bag of tortillas is a whole week's worth of 10-minute dinners — swap the cheese for whatever is open in the fridge."
+  },
+  {
+    id:"peppers", title:"Air Fryer Stuffed Peppers", cat:"veggie", img:"images/img-14.webp",
+    alt:"Stuffed bell peppers with turkey, rice and melted mozzarella",
+    desc:"Cheesy turkey-and-rice stuffed peppers in 20 minutes — a make-ahead friendly family dinner that reheats perfectly. They double as next-day lunch prep.",
+    time:20, cook:19, temp:"370°F", cost:2.50, cal:310, servings:4, badge:"Meal-prep hero",
+    ingredients:[
+      {n:"Large bell peppers, tops cut off and seeds removed", q:4, u:"", price:3.2},
+            {n:"Ground turkey", q:0.5, u:"lb", price:2.5},
+            {n:"Cooked rice", q:1, u:"cup", price:0.3},
+            {n:"Marinara sauce", q:0.5, u:"cup", price:0.45},
+            {n:"Shredded mozzarella", q:0.5, u:"cup", price:0.75},
+            {n:"Italian seasoning", q:1, u:"tsp", price:0.05},
+            {n:"Salt", q:0.5, u:"tsp", price:0.02},
+            {n:"Black pepper", q:0.25, u:"tsp", price:0.03}
+    ],
+    steps:[
+      "Mix ground turkey, cooked rice, marinara, half the mozzarella, Italian seasoning, salt, and pepper.",
+            "Fill each pepper with the mixture and top with the remaining mozzarella.",
+            "Place peppers upright in the air fryer basket.",
+            "Air fry at 370°F for 18–20 minutes until the peppers are tender and the filling is cooked.",
+            "Rest 3 minutes, then serve — they reheat well, so they double as next-day lunch prep."
+    ],
+    tip:"<b>Budget tip:</b> Use yesterday's leftover rice — day-old rice holds its shape in the filling instead of going mushy."
+  }
+];
+
+var state = { filter:"all", query:"", favs:{}, favOnly:false, grocery:{}, current:null, servings:4 };
+
+var grid = document.getElementById("recipeGrid");
+var toastEl = document.getElementById("toast");
+var toastTimer = null;
+function toast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 2600);
+}
+function money(n){ return "$" + n.toFixed(2); }
+function fmtQty(q){
+  if (q === Math.round(q)) return String(Math.round(q));
+  var fracs = {0.25:"¼",0.5:"½",0.75:"¾",0.33:"⅓"};
+  var whole = Math.floor(q), rem = Math.round((q-whole)*100)/100;
+  for (var k in fracs){ if (Math.abs(rem - parseFloat(k)) < 0.04) return (whole? whole+"":"") + fracs[k]; }
+  return String(Math.round(q*100)/100);
+}
+function matches(r){
+  if (state.favOnly && !state.favs[r.id]) return false;
+  if (state.filter === "fast" && r.cook > 15) return false;
+  if (state.filter === "cheap" && r.cost >= 2) return false;
+  if (["chicken","seafood","veggie","breakfast"].indexOf(state.filter) >= 0 && r.cat !== state.filter) return false;
+  if (state.query){
+    var hay = (r.title + " " + r.desc + " " + r.ingredients.map(function(i){return i.n;}).join(" ")).toLowerCase();
+    if (hay.indexOf(state.query) < 0) return false;
+  }
+  return true;
+}
+function render(){
+  var list = RECIPES.filter(matches);
+  document.getElementById("resultCount").textContent = list.length + (list.length===1?" recipe":" recipes") + " · tap a card for full ingredients & steps";
+  document.getElementById("favCount").textContent = Object.keys(state.favs).filter(function(k){return state.favs[k];}).length;
+  if (!list.length){
+    grid.innerHTML = '<div class="no-results"><h3 class="serif" style="margin:0 0 6px;color:var(--ink)">Nothing matches that — yet</h3><p style="margin:0">Try a different filter, or clear your search. New recipes land every week.</p></div>';
+    return;
+  }
+  grid.innerHTML = list.map(function(r){
+    var fav = state.favs[r.id] ? " active" : "";
+    var favLabel = state.favs[r.id] ? "Remove from saved" : "Save recipe";
+    return '<article class="card">' +
+      '<div class="card-img"><img src="'+r.img+'" alt="'+r.alt+'" />' +
+      '<span class="badge'+(r.cost<2?' green':'')+'">'+r.badge+'</span>' +
+      '<button class="fav-btn'+fav+'" data-fav="'+r.id+'" aria-label="'+favLabel+'">'+(state.favs[r.id]?"♥":"♡")+'</button></div>' +
+      '<div class="card-body"><h3>'+r.title+'</h3><p class="desc">'+r.desc+'</p>' +
+      '<div class="meta"><span>⏱ <b>'+r.time+' min</b> total</span><span>♨️ <b>'+r.cook+' min</b> @ '+r.temp+'</span><span>🍽 <b>'+r.servings+'</b> servings</span></div>' +
+      '<div class="cost-row"><div class="cost"><b>'+money(r.cost)+'</b><span>per serving</span></div>' +
+      '<div class="card-actions"><button class="btn btn-outline btn-small" data-add="'+r.id+'">＋ List</button>' +
+      '<button class="btn btn-primary btn-small" data-open="'+r.id+'">Recipe →</button></div></div></div></article>';
+  }).join("");
+}
+grid.addEventListener("click", function(e){
+  var favBtn = e.target.closest("[data-fav]");
+  var openBtn = e.target.closest("[data-open]");
+  var addBtn = e.target.closest("[data-add]");
+  if (favBtn){
+    var id = favBtn.getAttribute("data-fav");
+    state.favs[id] = !state.favs[id];
+    toast(state.favs[id] ? "Saved ♥ Find it under the Saved filter." : "Removed from saved.");
+    render(); return;
+  }
+  if (addBtn){ addRecipeToGrocery(addBtn.getAttribute("data-add")); return; }
+  if (openBtn){ openRecipe(openBtn.getAttribute("data-open")); }
+});
+
+/* Filters */
+document.querySelectorAll(".filter-btn[data-filter]").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.querySelectorAll(".filter-btn[data-filter]").forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+    btn.setAttribute("aria-pressed","true");
+    state.filter = btn.getAttribute("data-filter");
+    render();
+  });
+});
+document.getElementById("searchInput").addEventListener("input", function(e){
+  state.query = e.target.value.trim().toLowerCase(); render();
+});
+document.getElementById("favToggle").addEventListener("click", function(){
+  state.favOnly = !state.favOnly;
+  this.setAttribute("aria-pressed", String(state.favOnly));
+  render();
+});
+
+/* Dialog */
+var dlg = document.getElementById("recipeDialog");
+function openRecipe(id){
+  var r = RECIPES.filter(function(x){return x.id===id;})[0];
+  if (!r) return;
+  state.current = r; state.servings = r.servings;
+  document.getElementById("dlgImg").src = r.img;
+  document.getElementById("dlgImg").alt = r.alt;
+  document.getElementById("dlgTitle").textContent = r.title;
+  document.getElementById("dlgDesc").textContent = r.desc;
+  document.getElementById("dlgTime").textContent = r.time + " min";
+  document.getElementById("dlgTemp").textContent = r.temp + " · " + r.cook + " min";
+  document.getElementById("dlgCost").textContent = money(r.cost);
+  document.getElementById("dlgCal").textContent = r.cal + " kcal";
+  document.getElementById("dlgTip").innerHTML = r.tip;
+  renderIngredients();
+  document.getElementById("dlgSteps").innerHTML = r.steps.map(function(s){ return "<li>"+s+"</li>"; }).join("");
+  if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open","");
+  window.scrollTo(0,0);
+}
+function renderIngredients(){
+  var r = state.current; if (!r) return;
+  var ratio = state.servings / r.servings;
+  document.getElementById("servNum").textContent = state.servings;
+  document.getElementById("dlgIng").innerHTML = r.ingredients.map(function(ing, idx){
+    var q = ing.q * ratio;
+    return '<li><label><input type="checkbox" data-ing="'+idx+'" /> <span><b>'+fmtQty(q)+(ing.u?" "+ing.u:"")+'</b> — '+ing.n+'</span></label></li>';
+  }).join("");
+}
+document.getElementById("servMinus").addEventListener("click", function(){ if (state.servings>1){ state.servings--; renderIngredients(); } });
+document.getElementById("servPlus").addEventListener("click", function(){ if (state.servings<12){ state.servings++; renderIngredients(); } });
+document.getElementById("dlgClose").addEventListener("click", function(){ dlg.close(); });
+dlg.addEventListener("click", function(e){ if (e.target === dlg) dlg.close(); });
+document.getElementById("addAllBtn").addEventListener("click", function(){ if (state.current) addRecipeToGrocery(state.current.id, state.servings); });
+document.getElementById("copyBtn").addEventListener("click", function(){
+  var r = state.current; if (!r) return;
+  var ratio = state.servings / r.servings;
+  var text = r.title + " — ingredients for " + state.servings + " servings\n" + r.ingredients.map(function(i){ return "• " + fmtQty(i.q*ratio) + (i.u?" "+i.u:"") + " " + i.n; }).join("\n");
+  copyText(text, "Ingredients copied ✓");
+});
+document.getElementById("copyFullBtn").addEventListener("click", function(){
+  var r = state.current; if (!r) return;
+  var ratio = state.servings / r.servings;
+  var text = r.title + "\n" + r.time + " min total · " + r.temp + " for " + r.cook + " min · " + money(r.cost) + " per serving\n\nIngredients (" + state.servings + " servings)\n" +
+    r.ingredients.map(function(i){ return "• " + fmtQty(i.q*ratio) + (i.u?" "+i.u:"") + " " + i.n; }).join("\n") +
+    "\n\nMethod\n" + r.steps.map(function(s, i){ return (i+1) + ". " + s; }).join("\n");
+  copyText(text, "Full recipe copied ✓");
+});
+
+/* Grocery */
+function addRecipeToGrocery(id, servings){
+  var r = RECIPES.filter(function(x){return x.id===id;})[0];
+  if (!r) return;
+  var ratio = (servings || r.servings) / r.servings;
+  r.ingredients.forEach(function(ing){
+    var key = ing.n.toLowerCase();
+    if (!state.grocery[key]) state.grocery[key] = { n: ing.n, q:0, u: ing.u, price:0 };
+    state.grocery[key].q += ing.q * ratio;
+    state.grocery[key].price += ing.price * ratio;
+  });
+  renderGrocery();
+  toast("Added “" + r.title + "” to your grocery list 🛒");
+  document.getElementById("grocery").scrollIntoView({behavior:"smooth", block:"center"});
+}
+function renderGrocery(){
+  var keys = Object.keys(state.grocery);
+  var listEl = document.getElementById("groceryList");
+  var emptyEl = document.getElementById("groceryEmpty");
+  var totalEl = document.getElementById("groceryTotal");
+  emptyEl.style.display = keys.length ? "none" : "block";
+  var total = 0;
+  listEl.innerHTML = keys.sort().map(function(k){
+    var g = state.grocery[k]; total += g.price;
+    return '<div class="g-item"><span>'+fmtQty(g.q)+(g.u?" "+g.u:"")+" · "+g.n+'</span><b>'+money(g.price)+'</b></div>';
+  }).join("");
+  totalEl.textContent = keys.length ? "Estimated total: " + money(total) : "";
+}
+function copyText(text, msg){
+  function done(){ toast(msg); }
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(function(){ fallback(); });
+  } else fallback();
+  function fallback(){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch(e){ toast("Copy didn't work here — long-press to copy manually."); }
+    document.body.removeChild(ta);
+  }
+}
+document.getElementById("copyGrocery").addEventListener("click", function(){
+  var keys = Object.keys(state.grocery);
+  if (!keys.length){ toast("Your list is empty — add a recipe first."); return; }
+  var text = "Air Fryer on a Budget — grocery list\n" + keys.sort().map(function(k){
+    var g = state.grocery[k]; return "• " + fmtQty(g.q) + (g.u?" "+g.u:"") + " " + g.n;
+  }).join("\n");
+  copyText(text, "Grocery list copied ✓");
+});
+document.getElementById("clearGrocery").addEventListener("click", function(){
+  state.grocery = {}; renderGrocery(); toast("Grocery list cleared.");
+});
+
+render();
+renderGrocery();
+</script>
+<script src="images/img-1.js"></script>
+<script src="images/img-2.js"></script>
+<script src="images/img-3.js"></script>
+<script src="images/img-4.js"></script>
+<script src="images/img-5.js"></script>
+<script src="images/img-6.js"></script>
+<script src="images/img-7.js"></script>
+<script src="images/img-8.js"></script>
+<script src="images/img-9.js"></script>
+<script src="images/img-10.js"></script>
+<script src="images/img-11.js"></script>
+<script src="images/img-12.js"></script>
+<script src="images/img-13.js"></script>
+<script src="images/img-14.js"></script>
+<script>
+(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
+</script>
+</body>
+</html>
