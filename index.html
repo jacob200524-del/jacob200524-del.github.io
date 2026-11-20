@@ -223,7 +223,7 @@
         <h1>Restaurant-crisp dinners, <em>under $3.50</em> a plate.</h1>
         <p class="lede">Fourteen tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
         <div class="hero-stats" aria-label="Site highlights">
-          <div class="stat"><b>14</b><span>Launch recipes</span></div>
+          <div class="stat"><b>21</b><span>Launch recipes</span></div>
           <div class="stat"><b>8–25 min</b><span>Cook time range</span></div>
           <div class="stat"><b>$1.40–$3.40</b><span>Cost per serving*</span></div>
           <div class="stat"><b>400°F</b><span>Does most of the work</span></div>
@@ -232,7 +232,7 @@
           <a class="btn btn-primary" href="#recipes">Browse the recipes ↓</a>
           <a class="btn btn-ghost" href="#grocery">Build my grocery list</a>
         </div>
-        <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Your store will vary — the method won't.</p>
+        <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Calorie counts for the holiday recipes are estimates. Your store will vary — the method won't.</p>
       </div>
       <figure class="hero-img" style="margin:0">
         <img src="images/img-1.webp" alt="Golden, crispy air fryer chicken tenders on a white plate with dipping sauce and parsley" />
@@ -727,6 +727,167 @@ var RECIPES = [
             "Rest 3 minutes, then serve — they reheat well, so they double as next-day lunch prep."
     ],
     tip:"<b>Budget tip:</b> Use yesterday's leftover rice — day-old rice holds its shape in the filling instead of going mushy."
+  },
+  {
+    id:"turkey", title:"Air Fryer Thanksgiving Turkey Breast", cat:"turkey", img:"images/img-15.webp",
+    alt:"Sliced herb-roasted turkey breast on a white plate with thyme",
+    desc:"Juicy herb-rubbed turkey breast in 25 minutes — Thanksgiving flavor without the whole bird or the all-day oven. Butter-rested and sliced thin.",
+    time:25, cook:25, temp:"350°F", cost:3.20, cal:320, calEst:true, servings:4, badge:"Thanksgiving star",
+    ingredients:[
+      {n:"Boneless turkey breast", q:1.5, u:"lb", price:6.40},
+      {n:"Olive oil", q:2, u:"tbsp", price:0.30},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.10},
+      {n:"Dried thyme", q:1, u:"tsp", price:0.15},
+      {n:"Paprika", q:1, u:"tsp", price:0.10},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.5, u:"tsp", price:0.05},
+      {n:"Butter", q:1, u:"tbsp", price:0.15}
+    ],
+    steps:[
+      "Pat the turkey breast dry and rub all over with olive oil.",
+      "Mix garlic powder, thyme, paprika, salt, and pepper; rub over the turkey.",
+      "Place skin-side up in the air fryer basket.",
+      "Air fry at 350°F for 25 minutes until the internal temp hits 165°F.",
+      "Dot with butter, rest 5 minutes, then slice and serve."
+    ],
+    tip:"<b>Budget tip:</b> A boneless turkey breast is often half the price per pound of a whole bird — and it cooks in a fraction of the time."
+  },
+  {
+    id:"brussels", title:"Crispy Air Fryer Brussels Sprouts with Bacon", cat:"veggie", img:"images/img-16.webp",
+    alt:"Crispy roasted Brussels sprouts with bacon bits and maple glaze",
+    desc:"Charred edges, salty bacon, a maple finish — the side dish that converts Brussels sprouts skeptics in 15 minutes.",
+    time:15, cook:15, temp:"400°F", cost:1.80, cal:210, calEst:true, servings:4, badge:"Holiday side",
+    ingredients:[
+      {n:"Brussels sprouts", q:1, u:"lb", price:2.00},
+      {n:"Bacon, chopped", q:4, u:"slices", price:1.20},
+      {n:"Olive oil", q:1, u:"tbsp", price:0.15},
+      {n:"Maple syrup", q:1, u:"tbsp", price:0.25},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03}
+    ],
+    steps:[
+      "Trim and halve the Brussels sprouts; chop the bacon.",
+      "Toss sprouts with olive oil, salt, and pepper.",
+      "Spread in the air fryer basket in a single layer.",
+      "Air fry at 400°F for 12 minutes, shaking halfway.",
+      "Add bacon and maple syrup, cook 3 more minutes until crisp.",
+      "Serve hot as a holiday side."
+    ],
+    tip:"<b>Budget tip:</b> Frozen Brussels sprouts work here too — thaw and pat very dry first, or they'll steam instead of crisp."
+  },
+  {
+    id:"sweetpotato", title:"Air Fryer Sweet Potato Casserole Bites", cat:"veggie", img:"images/img-17.webp",
+    alt:"Roasted sweet potato cubes topped with toasted marshmallows and pecans",
+    desc:"All the sweet potato casserole flavor in bite-size form — cinnamon-brown sugar cubes with gooey marshmallow and pecans on top.",
+    time:18, cook:18, temp:"375°F", cost:1.60, cal:240, calEst:true, servings:4, badge:"Holiday sweet",
+    ingredients:[
+      {n:"Large sweet potatoes", q:2, u:"", price:1.60},
+      {n:"Brown sugar", q:2, u:"tbsp", price:0.15},
+      {n:"Butter", q:1, u:"tbsp", price:0.15},
+      {n:"Cinnamon", q:0.5, u:"tsp", price:0.05},
+      {n:"Mini marshmallows", q:0.25, u:"cup", price:0.30},
+      {n:"Chopped pecans", q:2, u:"tbsp", price:0.50}
+    ],
+    steps:[
+      "Peel and dice sweet potatoes into 1-inch cubes.",
+      "Toss with brown sugar, cinnamon, and melted butter.",
+      "Spread in the air fryer basket in a single layer.",
+      "Air fry at 375°F for 15 minutes, shaking halfway.",
+      "Top with marshmallows and pecans, cook 3 more minutes until gooey.",
+      "Spoon into bowls and serve warm."
+    ],
+    tip:"<b>Budget tip:</b> Skip the pecans and it's still great — the marshmallow and cinnamon carry the dish."
+  },
+  {
+    id:"briebites", title:"Air Fryer Cranberry Brie Bites", cat:"veggie", img:"images/img-18.webp",
+    alt:"Golden puff pastry cups with melted brie and cranberry sauce",
+    desc:"Buttery pastry, molten brie, tart cranberry, crunchy walnuts — a 15-minute holiday appetizer that looks like you tried much harder.",
+    time:15, cook:14, temp:"375°F", cost:2.40, cal:280, calEst:true, servings:4, badge:"Party hit",
+    ingredients:[
+      {n:"Puff pastry", q:1, u:"sheet", price:2.50},
+      {n:"Brie cheese", q:4, u:"oz", price:2.00},
+      {n:"Cranberry sauce", q:0.5, u:"cup", price:1.00},
+      {n:"Chopped walnuts", q:2, u:"tbsp", price:0.50},
+      {n:"Honey", q:1, u:"tbsp", price:0.15}
+    ],
+    steps:[
+      "Cut puff pastry into 12 squares and press into a muffin tin or silicone cups.",
+      "Add a cube of brie to each cup.",
+      "Spoon cranberry sauce over the brie.",
+      "Sprinkle with chopped walnuts.",
+      "Air fry at 375°F for 12–15 minutes until golden and bubbly.",
+      "Drizzle with honey and serve warm."
+    ],
+    tip:"<b>Budget tip:</b> Leftover cranberry sauce from Thanksgiving works perfectly — this is the recipe it was waiting for."
+  },
+  {
+    id:"carrots", title:"Air Fryer Honey Glazed Carrots", cat:"veggie", img:"images/img-19.webp",
+    alt:"Honey glazed roasted carrots with fresh thyme in a serving dish",
+    desc:"Sweet, buttery, caramelized at the edges — the easiest holiday side on the site, and kids actually eat them.",
+    time:15, cook:15, temp:"380°F", cost:1.40, cal:150, calEst:true, servings:4, badge:"Sweet side",
+    ingredients:[
+      {n:"Carrots", q:1, u:"lb", price:1.00},
+      {n:"Honey", q:2, u:"tbsp", price:0.30},
+      {n:"Butter", q:1, u:"tbsp", price:0.15},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+      {n:"Fresh thyme", q:1, u:"tsp", price:0.10}
+    ],
+    steps:[
+      "Peel carrots and cut into even sticks.",
+      "Toss with melted butter, honey, salt, and pepper.",
+      "Spread in the air fryer basket in a single layer.",
+      "Air fry at 380°F for 15 minutes, shaking halfway.",
+      "Sprinkle with thyme and serve as a sweet holiday side."
+    ],
+    tip:"<b>Budget tip:</b> Baby carrots skip the peeling entirely — same glaze, zero prep."
+  },
+  {
+    id:"stuffingballs", title:"Air Fryer Christmas Stuffing Balls", cat:"holiday", img:"images/img-20.webp",
+    alt:"Golden stuffing balls in an air fryer basket with a bowl of gravy",
+    desc:"Crispy outside, soft and herby inside — day-old bread becomes the Christmas side everyone reaches for first. Made for gravy.",
+    time:18, cook:17, temp:"375°F", cost:1.90, cal:290, calEst:true, servings:4, badge:"Christmas classic",
+    ingredients:[
+      {n:"Cubed day-old bread", q:4, u:"cups", price:1.00},
+      {n:"Chicken broth", q:0.5, u:"cup", price:0.50},
+      {n:"Egg", q:1, u:"", price:0.25},
+      {n:"Onion, diced", q:0.5, u:"", price:0.30},
+      {n:"Celery, diced", q:1, u:"stalk", price:0.25},
+      {n:"Dried sage", q:1, u:"tsp", price:0.15},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Butter", q:2, u:"tbsp", price:0.30}
+    ],
+    steps:[
+      "Sauté onion and celery in butter until soft.",
+      "Mix bread cubes, broth, egg, sage, and salt in a large bowl.",
+      "Fold in the sautéed vegetables and roll into 12 balls.",
+      "Place balls in the air fryer basket, not touching.",
+      "Air fry at 375°F for 15–18 minutes until golden and crisp.",
+      "Serve with gravy or cranberry sauce."
+    ],
+    tip:"<b>Budget tip:</b> Stale bread is the point — fresh bread turns to mush. If yours is fresh, dry the cubes in the air fryer for 5 minutes first."
+  },
+  {
+    id:"donutholes", title:"Air Fryer Cinnamon Sugar Donut Holes", cat:"dessert", img:"images/img-21.webp",
+    alt:"Cinnamon sugar donut holes with a mug of hot chocolate",
+    desc:"Puffy, buttery, rolled in cinnamon sugar — 15 minutes from fridge to a warm winter dessert, straight out of a can of biscuit dough.",
+    time:15, cook:11, temp:"350°F", cost:1.40, cal:260, calEst:true, servings:4, badge:"Winter treat",
+    ingredients:[
+      {n:"Refrigerated biscuit dough", q:1, u:"can", price:1.50},
+      {n:"Sugar", q:0.25, u:"cup", price:0.10},
+      {n:"Cinnamon", q:1, u:"tsp", price:0.05},
+      {n:"Melted butter", q:2, u:"tbsp", price:0.30},
+      {n:"Cooking spray", q:1, u:"", price:0.10}
+    ],
+    steps:[
+      "Cut each biscuit into 4 pieces and roll into balls.",
+      "Lightly spray the air fryer basket and place balls inside.",
+      "Air fry at 350°F for 10–12 minutes until puffed and golden.",
+      "Brush hot donut holes with melted butter.",
+      "Roll in cinnamon sugar until coated.",
+      "Serve warm with hot chocolate or coffee."
+    ],
+    tip:"<b>Budget tip:</b> Store-brand biscuit dough is the same dough for half the price — the cinnamon sugar hides any difference."
   }
 ];
 
@@ -827,7 +988,7 @@ function openRecipe(id){
   document.getElementById("dlgTime").textContent = r.time + " min";
   document.getElementById("dlgTemp").textContent = r.temp + " · " + r.cook + " min";
   document.getElementById("dlgCost").textContent = money(r.cost);
-  document.getElementById("dlgCal").textContent = r.cal + " kcal";
+  document.getElementById("dlgCal").textContent = r.cal + " kcal" + (r.calEst ? " (est.)" : "");
   document.getElementById("dlgTip").innerHTML = r.tip;
   renderIngredients();
   document.getElementById("dlgSteps").innerHTML = r.steps.map(function(s){ return "<li>"+s+"</li>"; }).join("");
@@ -933,8 +1094,15 @@ renderGrocery();
 <script src="images/img-12.js"></script>
 <script src="images/img-13.js"></script>
 <script src="images/img-14.js"></script>
+<script src="images/img-15.js"></script>
+<script src="images/img-16.js"></script>
+<script src="images/img-17.js"></script>
+<script src="images/img-18.js"></script>
+<script src="images/img-19.js"></script>
+<script src="images/img-20.js"></script>
+<script src="images/img-21.js"></script>
 <script>
-(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
+(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
 </script>
 </body>
 </html>
