@@ -221,9 +221,9 @@
       <div>
         <p class="kicker">Crispy food · Tiny grocery bill</p>
         <h1>Restaurant-crisp dinners, <em>under $3.50</em> a plate.</h1>
-        <p class="lede">Fourteen tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
+        <p class="lede">Twenty-eight tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
         <div class="hero-stats" aria-label="Site highlights">
-          <div class="stat"><b>21</b><span>Launch recipes</span></div>
+          <div class="stat"><b>28</b><span>Launch recipes</span></div>
           <div class="stat"><b>8–25 min</b><span>Cook time range</span></div>
           <div class="stat"><b>$1.40–$3.40</b><span>Cost per serving*</span></div>
           <div class="stat"><b>400°F</b><span>Does most of the work</span></div>
@@ -338,7 +338,7 @@
     <details><summary>Can I cook frozen chicken directly?</summary><p>Wings and tenders, yes — add about 50% more time and season after the surface thaws (around the halfway flip). Whole breasts are better thawed so the outside doesn't burn before the center cooks. Always verify 165°F inside.</p></details>
     <details><summary>Why isn't my food crispy?</summary><p>Almost always one of three things: the basket was crowded, the food was wet (pat it dry!), or there was no oil at all. A light spray matters — air alone can't brown a dry coating.</p></details>
     <details><summary>Are these costs real?</summary><p>They're careful estimates from typical U.S. supermarket shelf prices (store brands, family packs), calculated per serving in November 2026. Salmon and fish swing the most by region and season — when they're pricey, swap in the chicken or chickpea recipes that week.</p></details>
-    <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has fourteen. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
+    <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has twenty-eight. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
   </section>
 </main>
 
@@ -888,6 +888,168 @@ var RECIPES = [
       "Serve warm with hot chocolate or coffee."
     ],
     tip:"<b>Budget tip:</b> Store-brand biscuit dough is the same dough for half the price — the cinnamon sugar hides any difference."
+  },
+  {
+    id:"ham", title:"Air Fryer Honey Glazed Ham Slices", cat:"holiday", img:"images/img-22.webp",
+    alt:"Caramelized honey glazed ham slices with rosemary on a white platter",
+    desc:"Sticky honey glaze, caramelized edges, zero oven time. These ham slices turn leftover holiday ham into a 15-minute dinner the whole family actually wants.",
+    time:15, cook:14, temp:"375°F", cost:2.90, cal:340, calEst:true, servings:4, badge:"Christmas dinner",
+    ingredients:[
+      {n:"Ham steak, thick-cut", q:1, u:"lb", price:7.00},
+      {n:"Honey", q:2, u:"tbsp", price:0.30},
+      {n:"Brown sugar", q:1, u:"tbsp", price:0.08},
+      {n:"Dijon mustard", q:1, u:"tbsp", price:0.15},
+      {n:"Ground cloves", q:0.5, u:"tsp", price:0.10},
+      {n:"Butter", q:1, u:"tbsp", price:0.15}
+    ],
+    steps:[
+      "Score the ham steak lightly in a diamond pattern.",
+      "Whisk honey, brown sugar, mustard, and cloves into a glaze.",
+      "Brush half the glaze over the ham.",
+      "Air fry at 375°F for 10 minutes, flip, brush with remaining glaze.",
+      "Cook 3–5 more minutes until caramelized at the edges, then rest 2 minutes and slice."
+    ],
+    tip:"<b>Budget tip:</b> Leftover holiday ham is perfect here — slice it thick and glaze it the same way."
+  },
+  {
+    id:"chestnuts", title:"Air Fryer Roasted Chestnuts", cat:"veggie", img:"images/img-23.webp",
+    alt:"Roasted chestnuts with split shells in a rustic ceramic bowl",
+    desc:"Roasting chestnuts in the air fryer is faster and easier than the oven — the shells split open perfectly. A cozy winter snack for about $1.80 a serving (estimated).",
+    time:20, cook:17, temp:"400°F", cost:1.80, cal:220, calEst:true, servings:4, badge:"Winter snack",
+    ingredients:[
+      {n:"Fresh chestnuts", q:1, u:"lb", price:4.50},
+      {n:"Olive oil", q:1, u:"tbsp", price:0.15},
+      {n:"Flaky salt", q:0.5, u:"tsp", price:0.05},
+      {n:"Butter, melted", q:1, u:"tbsp", price:0.15}
+    ],
+    steps:[
+      "Score an X on the flat side of each chestnut with a sharp knife.",
+      "Soak in warm water for 10 minutes, then drain and pat dry.",
+      "Toss with olive oil and salt.",
+      "Air fry at 400°F for 15–18 minutes, shaking halfway, until the shells split open.",
+      "Wrap in a towel for 5 minutes, then peel while warm and toss with melted butter."
+    ],
+    tip:"<b>Budget tip:</b> Score deep enough to cut the shell — un-scored chestnuts can pop in the basket."
+  },
+  {
+    id:"parmfries", title:"Air Fryer Garlic Parmesan Fries", cat:"veggie", img:"images/img-24.webp",
+    alt:"Golden crispy garlic parmesan fries in a paper-lined basket with aioli",
+    desc:"Golden, crunchy, and covered in melted Parmesan and garlic — these fries beat drive-thru fries for about $1.50 a serving (estimated). Cut them thin and shake every 5 minutes.",
+    time:18, cook:17, temp:"400°F", cost:1.50, cal:300, calEst:true, servings:4, badge:"Better than drive-thru",
+    ingredients:[
+      {n:"Russet potatoes", q:2, u:"lb", price:1.20},
+      {n:"Olive oil", q:2, u:"tbsp", price:0.27},
+      {n:"Garlic cloves, minced", q:3, u:"", price:0.30},
+      {n:"Grated Parmesan", q:0.25, u:"cup", price:0.45},
+      {n:"Chopped parsley", q:1, u:"tbsp", price:0.20},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03}
+    ],
+    steps:[
+      "Cut potatoes into thin fries and soak in cold water for 15 minutes; drain and dry well.",
+      "Toss fries with olive oil, salt, and pepper.",
+      "Air fry at 400°F for 15–18 minutes, shaking every 5 minutes, until golden and crisp.",
+      "While hot, toss with minced garlic and Parmesan so it melts onto the fries.",
+      "Sprinkle with parsley and serve immediately with ketchup or aioli."
+    ],
+    tip:"<b>Budget tip:</b> Cut the fries thin and even — thick fries steam in the middle and never get crisp."
+  },
+  {
+    id:"buffalocauli", title:"Air Fryer Buffalo Cauliflower Bites", cat:"veggie", img:"images/img-25.webp",
+    alt:"Crispy buffalo cauliflower bites in a white bowl with ranch and celery",
+    desc:"Crispy, spicy, totally addictive — buffalo cauliflower bites with ranch for dipping. A meatless game-day snack for about $1.70 a serving (estimated).",
+    time:18, cook:13, temp:"400°F", cost:1.70, cal:180, calEst:true, servings:4, badge:"Game day",
+    ingredients:[
+      {n:"Cauliflower, cut into florets", q:1, u:"head", price:2.50},
+      {n:"All-purpose flour", q:0.5, u:"cup", price:0.15},
+      {n:"Water", q:0.5, u:"cup", price:0.00},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Buffalo sauce", q:0.5, u:"cup", price:0.80},
+      {n:"Butter, melted", q:1, u:"tbsp", price:0.15},
+      {n:"Ranch dressing, to serve", q:1, u:"", price:0.60}
+    ],
+    steps:[
+      "Whisk flour, water, garlic powder, and salt into a thin batter.",
+      "Dip cauliflower florets in the batter, letting the excess drip off.",
+      "Air fry at 400°F for 12–14 minutes, shaking halfway, until the coating is crisp.",
+      "Toss hot florets in buffalo sauce mixed with melted butter.",
+      "Serve with ranch or blue cheese dressing and celery sticks."
+    ],
+    tip:"<b>Budget tip:</b> Don't overcrowd — the batter needs space or it steams and slides off."
+  },
+  {
+    id:"teriyaki", title:"Air Fryer Teriyaki Salmon", cat:"seafood", img:"images/img-26.webp",
+    alt:"Glossy teriyaki salmon over rice with sesame seeds and green onions",
+    desc:"Sticky-sweet teriyaki glaze, caramelized edges, salmon that flakes perfectly — in 15 minutes. About $3.30 a serving (estimated) over rice with sesame and green onions.",
+    time:15, cook:9, temp:"400°F", cost:3.30, cal:330, calEst:true, servings:4, badge:"15-minute dinner",
+    ingredients:[
+      {n:"Salmon fillets", q:1, u:"lb", price:8.00},
+      {n:"Soy sauce", q:3, u:"tbsp", price:0.20},
+      {n:"Honey", q:2, u:"tbsp", price:0.30},
+      {n:"Rice vinegar", q:1, u:"tbsp", price:0.15},
+      {n:"Grated ginger", q:1, u:"tsp", price:0.20},
+      {n:"Garlic clove, minced", q:1, u:"", price:0.10},
+      {n:"Sesame seeds", q:1, u:"tsp", price:0.10},
+      {n:"Green onions, sliced", q:2, u:"", price:0.40},
+      {n:"Cooked rice, to serve", q:2, u:"cups", price:0.60}
+    ],
+    steps:[
+      "Whisk soy sauce, honey, rice vinegar, ginger, and garlic into a teriyaki glaze.",
+      "Brush half the glaze over the salmon fillets.",
+      "Air fry at 400°F for 8–10 minutes until the salmon flakes and the glaze caramelizes.",
+      "Brush with the remaining glaze while hot.",
+      "Sprinkle with sesame seeds and green onions and serve over rice."
+    ],
+    tip:"<b>Budget tip:</b> Watch the last 2 minutes — honey glazes go from caramelized to burnt fast at 400°F."
+  },
+  {
+    id:"lavacake", title:"Air Fryer Chocolate Lava Cake", cat:"dessert", img:"images/img-27.webp",
+    alt:"Chocolate lava cake in a ramekin with molten chocolate flowing out",
+    desc:"Molten chocolate center, set edges, 12 minutes from bowl to plate. The winter dessert that looks fancy and costs about $1.90 a serving (estimated).",
+    time:12, cook:9, temp:"370°F", cost:1.90, cal:380, calEst:true, servings:4, badge:"Winter treat",
+    ingredients:[
+      {n:"Dark chocolate, chopped", q:4, u:"oz", price:1.50},
+      {n:"Butter", q:4, u:"tbsp", price:0.60},
+      {n:"Eggs", q:2, u:"", price:0.50},
+      {n:"Sugar", q:0.25, u:"cup", price:0.10},
+      {n:"All-purpose flour", q:2, u:"tbsp", price:0.08},
+      {n:"Vanilla extract", q:1, u:"tsp", price:0.15},
+      {n:"Salt", q:1, u:"pinch", price:0.02},
+      {n:"Cooking spray", q:1, u:"", price:0.10},
+      {n:"Powdered sugar, to dust", q:1, u:"", price:0.10}
+    ],
+    steps:[
+      "Melt chocolate and butter together until smooth; let cool 2 minutes.",
+      "Whisk in eggs, sugar, vanilla, and salt, then fold in the flour.",
+      "Grease 4 ramekins and divide the batter between them.",
+      "Air fry at 370°F for 8–10 minutes until the edges are set but the center still wobbles.",
+      "Rest 1 minute, run a knife around the edge, invert onto plates, and dust with powdered sugar."
+    ],
+    tip:"<b>Budget tip:</b> Underbake by a minute rather than overbake — the molten center is the whole point."
+  },
+  {
+    id:"sliders", title:"Air Fryer Leftover Turkey Sliders", cat:"turkey", img:"images/img-28.webp",
+    alt:"Golden leftover turkey sliders with melted swiss and cranberry sauce",
+    desc:"The best thing to happen to leftover turkey: melty Swiss, tart cranberry sauce, buttery toasted buns — 12 minutes in the air fryer. About $2.10 a serving (estimated).",
+    time:12, cook:9, temp:"380°F", cost:2.10, cal:360, calEst:true, servings:4, badge:"Leftover hero",
+    ingredients:[
+      {n:"Slider buns", q:12, u:"", price:2.50},
+      {n:"Leftover turkey, sliced", q:1, u:"lb", price:0.00},
+      {n:"Cranberry sauce", q:0.5, u:"cup", price:1.00},
+      {n:"Swiss cheese slices", q:6, u:"", price:1.50},
+      {n:"Butter, melted", q:2, u:"tbsp", price:0.30},
+      {n:"Dijon mustard", q:1, u:"tsp", price:0.10},
+      {n:"Garlic powder", q:0.5, u:"tsp", price:0.05}
+    ],
+    steps:[
+      "Split the slider buns and layer turkey, cranberry sauce, and Swiss on the bottom halves.",
+      "Place the tops on and brush with butter mixed with Dijon and garlic powder.",
+      "Arrange sliders snugly in the air fryer basket (they can touch).",
+      "Air fry at 380°F for 8–10 minutes until the cheese melts and the tops are golden.",
+      "Serve hot — the cranberry and melted Swiss do all the work."
+    ],
+    tip:"<b>Budget tip:</b> Any leftover roast works here — ham, chicken, even stuffing balls squashed flat make a great slider."
   }
 ];
 
@@ -1101,8 +1263,15 @@ renderGrocery();
 <script src="images/img-19.js"></script>
 <script src="images/img-20.js"></script>
 <script src="images/img-21.js"></script>
+<script src="images/img-22.js"></script>
+<script src="images/img-23.js"></script>
+<script src="images/img-24.js"></script>
+<script src="images/img-25.js"></script>
+<script src="images/img-26.js"></script>
+<script src="images/img-27.js"></script>
+<script src="images/img-28.js"></script>
 <script>
-(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
+(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21,"images/img-22.webp":window.IMG22,"images/img-23.webp":window.IMG23,"images/img-24.webp":window.IMG24,"images/img-25.webp":window.IMG25,"images/img-26.webp":window.IMG26,"images/img-27.webp":window.IMG27,"images/img-28.webp":window.IMG28};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
 </script>
 </body>
 </html>
