@@ -221,11 +221,11 @@
       <div>
         <p class="kicker">Crispy food · Tiny grocery bill</p>
         <h1>Restaurant-crisp dinners, <em>under $3.50</em> a plate.</h1>
-        <p class="lede">Twenty-eight tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
+        <p class="lede">Thirty-five tested air fryer recipes built around one cheap weekly basket — frozen chicken, potatoes, eggs, and whatever veg is on sale. No deep fryer, no $18 takeout, no sad soggy fries.</p>
         <div class="hero-stats" aria-label="Site highlights">
-          <div class="stat"><b>28</b><span>Launch recipes</span></div>
+          <div class="stat"><b>35</b><span>Launch recipes</span></div>
           <div class="stat"><b>8–25 min</b><span>Cook time range</span></div>
-          <div class="stat"><b>$1.40–$3.40</b><span>Cost per serving*</span></div>
+          <div class="stat"><b>$1.30–$3.40</b><span>Cost per serving*</span></div>
           <div class="stat"><b>400°F</b><span>Does most of the work</span></div>
         </div>
         <div class="hero-cta">
@@ -338,7 +338,7 @@
     <details><summary>Can I cook frozen chicken directly?</summary><p>Wings and tenders, yes — add about 50% more time and season after the surface thaws (around the halfway flip). Whole breasts are better thawed so the outside doesn't burn before the center cooks. Always verify 165°F inside.</p></details>
     <details><summary>Why isn't my food crispy?</summary><p>Almost always one of three things: the basket was crowded, the food was wet (pat it dry!), or there was no oil at all. A light spray matters — air alone can't brown a dry coating.</p></details>
     <details><summary>Are these costs real?</summary><p>They're careful estimates from typical U.S. supermarket shelf prices (store brands, family packs), calculated per serving in November 2026. Salmon and fish swing the most by region and season — when they're pricey, swap in the chicken or chickpea recipes that week.</p></details>
-    <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has twenty-eight. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
+    <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has thirty-five. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
   </section>
 </main>
 
@@ -1050,6 +1050,169 @@ var RECIPES = [
       "Serve hot — the cranberry and melted Swiss do all the work."
     ],
     tip:"<b>Budget tip:</b> Any leftover roast works here — ham, chicken, even stuffing balls squashed flat make a great slider."
+  },
+  {
+    id:"potpie", title:"Air Fryer Chicken Pot Pie Bites", cat:"chicken", img:"images/img-29.webp",
+    alt:"Golden air fryer chicken pot pie bites, flaky pastry pockets with creamy chicken filling",
+    desc:"All the cozy flavor of chicken pot pie, no pie dish, no oven — flaky biscuit pockets stuffed with creamy chicken and veggies, ready in 18 minutes.",
+    time:18, cook:14, temp:"375°F", cost:2.30, cal:320, calEst:true, servings:4, badge:"Winter comfort",
+    ingredients:[
+      {n:"Refrigerated biscuit dough", q:1, u:"can", price:1.50},
+      {n:"Cooked chicken, diced", q:1, u:"cup", price:2.50},
+      {n:"Frozen mixed vegetables", q:0.5, u:"cup", price:0.60},
+      {n:"Cream of chicken soup", q:0.5, u:"cup", price:0.90},
+      {n:"Dried thyme", q:0.5, u:"tsp", price:0.10},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+      {n:"Egg, beaten, for wash", q:1, u:"", price:0.25}
+    ],
+    steps:[
+      "Mix chicken, frozen vegetables, soup, thyme, and pepper in a bowl.",
+      "Flatten each biscuit into a 4-inch round and spoon filling into the center.",
+      "Fold the dough over and pinch the edges shut to make a half-moon pocket.",
+      "Brush with beaten egg and place seam-side up in the air fryer basket.",
+      "Air fry at 375°F for 12–15 minutes until golden and puffed."
+    ],
+    tip:"<b>Budget tip:</b> Leftover rotisserie chicken is perfect here — it turns a $5 chicken into two dinners."
+  },
+  {
+    id:"steakbites", title:"Air Fryer Garlic Butter Steak Bites", cat:"beef", img:"images/img-30.webp",
+    alt:"Juicy air fryer garlic butter steak bites with parsley in a cast iron skillet",
+    desc:"Juicy steak bites browned in the air fryer and tossed in garlic butter — a 12-minute dinner that tastes like a steakhouse night, for about $3.40 a serving (estimated).",
+    time:12, cook:9, temp:"400°F", cost:3.40, cal:380, calEst:true, servings:4, badge:"12-minute dinner",
+    ingredients:[
+      {n:"Sirloin steak, cubed", q:1, u:"lb", price:8.00},
+      {n:"Butter, melted", q:2, u:"tbsp", price:0.30},
+      {n:"Garlic cloves, minced", q:3, u:"", price:0.30},
+      {n:"Worcestershire sauce", q:1, u:"tsp", price:0.10},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.5, u:"tsp", price:0.05},
+      {n:"Chopped parsley", q:1, u:"tbsp", price:0.20}
+    ],
+    steps:[
+      "Toss steak cubes with salt, pepper, and Worcestershire sauce.",
+      "Spread in a single layer in the air fryer basket — don't crowd them.",
+      "Air fry at 400°F for 8–10 minutes, shaking once, until browned outside and pink inside.",
+      "Toss the hot steak bites with melted butter, garlic, and parsley.",
+      "Serve over mashed potatoes or with crusty bread to mop up the garlic butter."
+    ],
+    tip:"<b>Budget tip:</b> Sirloin is the budget cut that works here — skip the ribeye, the garlic butter does the heavy lifting."
+  },
+  {
+    id:"potatoskins", title:"Air Fryer Loaded Baked Potato Skins", cat:"veggie", img:"images/img-31.webp",
+    alt:"Crispy loaded baked potato skins with melted cheddar, bacon, sour cream and green onions",
+    desc:"Crispy potato skins loaded with melted cheddar, bacon, sour cream, and green onions — the game-day snack that doubles as dinner. About $1.70 a serving (estimated).",
+    time:20, cook:12, temp:"400°F", cost:1.70, cal:310, calEst:true, servings:4, badge:"Game-day snack",
+    ingredients:[
+      {n:"Russet potatoes, large", q:4, u:"", price:1.60},
+      {n:"Shredded cheddar cheese", q:1, u:"cup", price:1.00},
+      {n:"Bacon, cooked and crumbled", q:4, u:"slices", price:1.20},
+      {n:"Butter, melted", q:2, u:"tbsp", price:0.30},
+      {n:"Sour cream", q:0.5, u:"cup", price:0.60},
+      {n:"Green onions, sliced", q:2, u:"", price:0.40},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02}
+    ],
+    steps:[
+      "Microwave the potatoes until tender (about 8 minutes), then halve lengthwise.",
+      "Scoop out most of the flesh, leaving a 1/4-inch shell — save the scooped potato for mash.",
+      "Brush the skins with melted butter and salt, then air fry at 400°F for 8 minutes until crisp.",
+      "Fill with cheddar and bacon and cook 3–4 more minutes until the cheese melts.",
+      "Top with sour cream and green onions and serve hot."
+    ],
+    tip:"<b>Budget tip:</b> The scooped-out potato is tomorrow's lunch — mash it with butter and it's a whole second side."
+  },
+  {
+    id:"thighs", title:"Air Fryer Honey Mustard Chicken Thighs", cat:"chicken", img:"images/img-32.webp",
+    alt:"Glossy honey mustard chicken thighs with caramelized golden skin on a white plate",
+    desc:"Sticky-sweet honey mustard glaze, crispy golden skin, juicy thighs — 18 minutes in the air fryer, one bowl of sauce. About $2.60 a serving (estimated).",
+    time:18, cook:17, temp:"380°F", cost:2.60, cal:350, calEst:true, servings:4, badge:"Sticky & sweet",
+    ingredients:[
+      {n:"Bone-in chicken thighs", q:1.5, u:"lb", price:4.50},
+      {n:"Honey", q:3, u:"tbsp", price:0.45},
+      {n:"Dijon mustard", q:2, u:"tbsp", price:0.20},
+      {n:"Olive oil", q:1, u:"tbsp", price:0.15},
+      {n:"Garlic cloves, minced", q:2, u:"", price:0.20},
+      {n:"Paprika", q:1, u:"tsp", price:0.10},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03}
+    ],
+    steps:[
+      "Whisk honey, Dijon, olive oil, garlic, paprika, salt, and pepper into a sauce.",
+      "Coat the chicken thighs all over with half the sauce.",
+      "Place skin-side up in the air fryer basket.",
+      "Air fry at 380°F for 16–18 minutes until the skin is crisp and the inside hits 165°F.",
+      "Brush with the remaining sauce and rest 3 minutes before serving."
+    ],
+    tip:"<b>Budget tip:</b> Bone-in thighs stay juicier than breasts at this temp — and they're usually a dollar a pound cheaper."
+  },
+  {
+    id:"fritters", title:"Air Fryer Apple Fritters", cat:"dessert", img:"images/img-33.webp",
+    alt:"Golden air fryer apple fritters drizzled with white glaze on a white plate",
+    desc:"Warm cinnamon-apple fritters with a sweet glaze drizzle — 15 minutes, no deep fryer, and the whole house smells like a bakery. About $1.50 a serving (estimated).",
+    time:15, cook:11, temp:"350°F", cost:1.50, cal:290, calEst:true, servings:4, badge:"Winter dessert",
+    ingredients:[
+      {n:"Refrigerated biscuit dough", q:1, u:"can", price:1.50},
+      {n:"Apple, peeled and diced", q:1, u:"large", price:0.80},
+      {n:"Brown sugar", q:2, u:"tbsp", price:0.10},
+      {n:"Cinnamon", q:1, u:"tsp", price:0.05},
+      {n:"Butter, melted", q:1, u:"tbsp", price:0.15},
+      {n:"Powdered sugar", q:0.5, u:"cup", price:0.20},
+      {n:"Milk", q:1, u:"tbsp", price:0.05}
+    ],
+    steps:[
+      "Toss the diced apple with brown sugar and cinnamon.",
+      "Flatten each biscuit, spoon apple filling in the center, and pinch closed into a ball.",
+      "Spray the basket and the fritters lightly with cooking spray.",
+      "Air fry at 350°F for 10–12 minutes until puffed and golden.",
+      "Whisk powdered sugar with milk into a glaze and drizzle over the warm fritters."
+    ],
+    tip:"<b>Budget tip:</b> Any firm apple works — Granny Smith holds its shape best and balances the sweet glaze."
+  },
+  {
+    id:"drumsticks", title:"Air Fryer BBQ Chicken Drumsticks", cat:"chicken", img:"images/img-34.webp",
+    alt:"Sticky BBQ chicken drumsticks with caramelized sauce and parsley on a white plate",
+    desc:"Crispy-skinned drumsticks with sticky caramelized BBQ sauce — the trick is saucing at the end so it never burns. About $2.40 a serving (estimated).",
+    time:20, cook:19, temp:"380°F", cost:2.40, cal:340, calEst:true, servings:4, badge:"Family favorite",
+    ingredients:[
+      {n:"Chicken drumsticks", q:2, u:"lb", price:4.00},
+      {n:"BBQ sauce", q:0.5, u:"cup", price:0.80},
+      {n:"Olive oil", q:1, u:"tbsp", price:0.15},
+      {n:"Garlic powder", q:1, u:"tsp", price:0.05},
+      {n:"Smoked paprika", q:1, u:"tsp", price:0.10},
+      {n:"Salt", q:0.5, u:"tsp", price:0.02},
+      {n:"Black pepper", q:0.25, u:"tsp", price:0.03},
+      {n:"Chopped parsley", q:1, u:"tbsp", price:0.20}
+    ],
+    steps:[
+      "Pat the drumsticks dry and toss with olive oil, garlic powder, paprika, salt, and pepper.",
+      "Arrange in a single layer in the air fryer basket.",
+      "Air fry at 380°F for 18–20 minutes, flipping halfway, until the skin is crisp.",
+      "Brush generously with BBQ sauce and cook 2 more minutes until the sauce caramelizes.",
+      "Sprinkle with parsley and serve with extra sauce for dipping."
+    ],
+    tip:"<b>Budget tip:</b> Sauce only goes on at the end — BBQ sauce burns at 380°F if it's on from the start."
+  },
+  {
+    id:"garlicbread", title:"Air Fryer Cheesy Garlic Bread Bites", cat:"veggie", img:"images/img-35.webp",
+    alt:"Golden cheesy garlic bread bites with melted mozzarella and parmesan in a rustic baking dish",
+    desc:"Golden bread cubes tossed in garlic butter, baked until crisp, then buried under bubbly mozzarella and Parmesan — 12 minutes to the snack everyone fights over. About $1.30 a serving (estimated).",
+    time:12, cook:9, temp:"375°F", cost:1.30, cal:260, calEst:true, servings:4, badge:"12-minute snack",
+    ingredients:[
+      {n:"French bread, cubed", q:1, u:"loaf", price:2.00},
+      {n:"Butter, melted", q:3, u:"tbsp", price:0.45},
+      {n:"Garlic cloves, minced", q:3, u:"", price:0.30},
+      {n:"Shredded mozzarella", q:1, u:"cup", price:1.00},
+      {n:"Grated Parmesan", q:2, u:"tbsp", price:0.30},
+      {n:"Chopped parsley", q:1, u:"tbsp", price:0.20},
+      {n:"Italian seasoning", q:0.5, u:"tsp", price:0.05}
+    ],
+    steps:[
+      "Toss the bread cubes with melted butter, garlic, and Italian seasoning.",
+      "Spread in a single layer in the air fryer basket.",
+      "Air fry at 375°F for 6 minutes until the cubes are golden and crisp at the edges.",
+      "Sprinkle mozzarella and Parmesan over the top and cook 3–4 more minutes until melted and bubbly.",
+      "Shower with parsley and serve warm — they go with soup, pasta, or nothing at all."
+    ],
+    tip:"<b>Budget tip:</b> Day-old bread works better than fresh here — it crisps instead of steaming."
   }
 ];
 
@@ -1270,8 +1433,15 @@ renderGrocery();
 <script src="images/img-26.js"></script>
 <script src="images/img-27.js"></script>
 <script src="images/img-28.js"></script>
+<script src="images/img-29.js"></script>
+<script src="images/img-30.js"></script>
+<script src="images/img-31.js"></script>
+<script src="images/img-32.js"></script>
+<script src="images/img-33.js"></script>
+<script src="images/img-34.js"></script>
+<script src="images/img-35.js"></script>
 <script>
-(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21,"images/img-22.webp":window.IMG22,"images/img-23.webp":window.IMG23,"images/img-24.webp":window.IMG24,"images/img-25.webp":window.IMG25,"images/img-26.webp":window.IMG26,"images/img-27.webp":window.IMG27,"images/img-28.webp":window.IMG28};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
+(function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21,"images/img-22.webp":window.IMG22,"images/img-23.webp":window.IMG23,"images/img-24.webp":window.IMG24,"images/img-25.webp":window.IMG25,"images/img-26.webp":window.IMG26,"images/img-27.webp":window.IMG27,"images/img-28.webp":window.IMG28,"images/img-29.webp":window.IMG29,"images/img-30.webp":window.IMG30,"images/img-31.webp":window.IMG31,"images/img-32.webp":window.IMG32,"images/img-33.webp":window.IMG33,"images/img-34.webp":window.IMG34,"images/img-35.webp":window.IMG35};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
 </script>
 </body>
 </html>
