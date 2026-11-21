@@ -108,6 +108,19 @@
   .cost b{font-size:20px;color:var(--accent)}
   .cost span{display:block;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
   .card-actions{display:flex;gap:8px}
+  .bundle{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:22px;margin:28px 0}
+  .bundle h2{margin:0 0 6px;font-size:24px}
+  .bundle p.intro{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+  .bundle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .bundle-card{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--surface-2)}
+  .bundle-card h3{margin:0;font-size:17px}
+  .bundle-card p{margin:0;color:var(--ink-2);font-size:13.5px;flex:1}
+  .bundle-card .price{font-weight:800;font-size:18px}
+  .bundle-card .btn{align-self:flex-start}
+  .pdf-link{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--accent);text-decoration:none}
+  .pdf-link:hover{text-decoration:underline}
+  @media (max-width:860px){.bundle-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.bundle-grid{grid-template-columns:1fr}}
   .btn-small{padding:10px 14px;min-height:44px;font-size:14px;border-radius:999px}
   .btn-outline{border:1px solid var(--line);background:var(--surface);color:var(--ink);font-weight:700}
   /* Detail dialog */
@@ -208,6 +221,7 @@
       <a href="#tips">Budget Tips</a>
       <a href="#gear">Starter Gear</a>
       <a href="#grocery">Grocery List</a>
+      <a href="#bundles">Bundles</a>
       <a href="#faq">FAQ</a>
     </nav>
     <span class="pilot-pill">Pilot · Week 1</span>
@@ -231,6 +245,7 @@
         <div class="hero-cta">
           <a class="btn btn-primary" href="#recipes">Browse the recipes ↓</a>
           <a class="btn btn-ghost" href="#grocery">Build my grocery list</a>
+          <a class="btn btn-ghost" href="#bundles">Printable bundles ↓</a>
         </div>
         <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Calorie counts for the holiday recipes are estimates. Your store will vary — the method won't.</p>
       </div>
@@ -264,6 +279,40 @@
         <span class="chip">Pantry: panko, parmesan, spices, sauces</span>
       </div>
       <div class="basket-total"><b>≈ $44</b><span>Feeds 4 · 7 meals</span></div>
+    </div>
+  </section>
+
+  <!-- PRINTABLE BUNDLES -->
+  <section class="wrap" id="bundles">
+    <div class="bundle">
+      <h2>🖨️ Get the printable recipe bundles</h2>
+      <p class="intro">Every recipe on this page is free to cook. The printable PDFs are the same recipes, cleaned up for the fridge door — one page per recipe, no ads, no scrolling with greasy hands.</p>
+      <div class="bundle-grid">
+        <div class="bundle-card">
+          <h3>Full bundle — all 35 recipes</h3>
+          <p>Every recipe on the site in one printable pack, including the holiday ones.</p>
+          <span class="price">$12</span>
+          <a class="btn btn-primary btn-small" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get the bundle</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Holiday 7-pack</h3>
+          <p>Turkey, Brussels sprouts, sweet potato bites, brie bites, carrots, stuffing balls, donut holes.</p>
+          <span class="price">$9.95</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qofql" target="_blank" rel="noopener">Get the 7-pack</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Thanksgiving 5-pack</h3>
+          <p>The five Thanksgiving recipes, printable and fridge-door ready.</p>
+          <span class="price">$8.95</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/jncvw" target="_blank" rel="noopener">Get the 5-pack</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Air fryer cheat sheet</h3>
+          <p>Times and temps for the foods you cook most. Free — no card needed.</p>
+          <span class="price">$0</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">Get it free</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -328,6 +377,40 @@
         <div class="gear"><span class="gear-icon">🥄</span><div><b>Silicone-tipped tongs</b><p>For the halfway flip without shredding the coating or scratching the basket.</p></div><div class="price"><b>$7–10</b><span>Typical range</span></div></div>
       </div>
       <p style="font-size:13px;color:var(--muted);margin:14px 0 0">Pilot note: affiliate links aren't live yet. Prices above are typical U.S. retail ranges to help you budget — check your store before you buy.</p>
+    </div>
+  </section>
+
+  <!-- PRINTABLE BUNDLES (repeat) -->
+  <section class="wrap">
+    <div class="bundle">
+      <h2>🖨️ Want these on paper?</h2>
+      <p class="intro">The printable bundles have every recipe on this page, one page each — plus a free air fryer cheat sheet.</p>
+      <div class="bundle-grid">
+        <div class="bundle-card">
+          <h3>Full bundle — all 35 recipes</h3>
+          <p>Every recipe on the site in one printable pack.</p>
+          <span class="price">$12</span>
+          <a class="btn btn-primary btn-small" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get the bundle</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Holiday 7-pack</h3>
+          <p>Seven holiday recipes, printable.</p>
+          <span class="price">$9.95</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qofql" target="_blank" rel="noopener">Get the 7-pack</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Thanksgiving 5-pack</h3>
+          <p>The five Thanksgiving recipes, printable.</p>
+          <span class="price">$8.95</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/jncvw" target="_blank" rel="noopener">Get the 5-pack</a>
+        </div>
+        <div class="bundle-card">
+          <h3>Air fryer cheat sheet</h3>
+          <p>Times and temps for the foods you cook most. Free.</p>
+          <span class="price">$0</span>
+          <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">Get it free</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -753,7 +836,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> A boneless turkey breast is often half the price per pound of a whole bird — and it cooks in a fraction of the time."
   },
   {
-    id:"brussels", title:"Crispy Air Fryer Brussels Sprouts with Bacon", cat:"veggie", img:"images/img-16.webp",
+    id:"brussels", title:"Crispy Air Fryer Brussels Sprouts with Bacon", cat:"veggie", img:"images/img-16.webp", pdf:"https://airfryeronabudget.gumroad.com/l/dvvvwd",
     alt:"Crispy roasted Brussels sprouts with bacon bits and maple glaze",
     desc:"Charred edges, salty bacon, a maple finish — the side dish that converts Brussels sprouts skeptics in 15 minutes.",
     time:15, cook:15, temp:"400°F", cost:1.80, cal:210, calEst:true, servings:4, badge:"Holiday side",
@@ -776,7 +859,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> Frozen Brussels sprouts work here too — thaw and pat very dry first, or they'll steam instead of crisp."
   },
   {
-    id:"sweetpotato", title:"Air Fryer Sweet Potato Casserole Bites", cat:"veggie", img:"images/img-17.webp",
+    id:"sweetpotato", title:"Air Fryer Sweet Potato Casserole Bites", cat:"veggie", img:"images/img-17.webp", pdf:"https://airfryeronabudget.gumroad.com/l/qoagwl",
     alt:"Roasted sweet potato cubes topped with toasted marshmallows and pecans",
     desc:"All the sweet potato casserole flavor in bite-size form — cinnamon-brown sugar cubes with gooey marshmallow and pecans on top.",
     time:18, cook:18, temp:"375°F", cost:1.60, cal:240, calEst:true, servings:4, badge:"Holiday sweet",
@@ -799,7 +882,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> Skip the pecans and it's still great — the marshmallow and cinnamon carry the dish."
   },
   {
-    id:"briebites", title:"Air Fryer Cranberry Brie Bites", cat:"veggie", img:"images/img-18.webp",
+    id:"briebites", title:"Air Fryer Cranberry Brie Bites", cat:"veggie", img:"images/img-18.webp", pdf:"https://airfryeronabudget.gumroad.com/l/plsriz",
     alt:"Golden puff pastry cups with melted brie and cranberry sauce",
     desc:"Buttery pastry, molten brie, tart cranberry, crunchy walnuts — a 15-minute holiday appetizer that looks like you tried much harder.",
     time:15, cook:14, temp:"375°F", cost:2.40, cal:280, calEst:true, servings:4, badge:"Party hit",
@@ -821,7 +904,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> Leftover cranberry sauce from Thanksgiving works perfectly — this is the recipe it was waiting for."
   },
   {
-    id:"carrots", title:"Air Fryer Honey Glazed Carrots", cat:"veggie", img:"images/img-19.webp",
+    id:"carrots", title:"Air Fryer Honey Glazed Carrots", cat:"veggie", img:"images/img-19.webp", pdf:"https://airfryeronabudget.gumroad.com/l/eastvc",
     alt:"Honey glazed roasted carrots with fresh thyme in a serving dish",
     desc:"Sweet, buttery, caramelized at the edges — the easiest holiday side on the site, and kids actually eat them.",
     time:15, cook:15, temp:"380°F", cost:1.40, cal:150, calEst:true, servings:4, badge:"Sweet side",
@@ -843,7 +926,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> Baby carrots skip the peeling entirely — same glaze, zero prep."
   },
   {
-    id:"stuffingballs", title:"Air Fryer Christmas Stuffing Balls", cat:"holiday", img:"images/img-20.webp",
+    id:"stuffingballs", title:"Air Fryer Christmas Stuffing Balls", cat:"holiday", img:"images/img-20.webp", pdf:"https://airfryeronabudget.gumroad.com/l/ayzdbx",
     alt:"Golden stuffing balls in an air fryer basket with a bowl of gravy",
     desc:"Crispy outside, soft and herby inside — day-old bread becomes the Christmas side everyone reaches for first. Made for gravy.",
     time:18, cook:17, temp:"375°F", cost:1.90, cal:290, calEst:true, servings:4, badge:"Christmas classic",
@@ -1029,7 +1112,7 @@ var RECIPES = [
     tip:"<b>Budget tip:</b> Underbake by a minute rather than overbake — the molten center is the whole point."
   },
   {
-    id:"sliders", title:"Air Fryer Leftover Turkey Sliders", cat:"turkey", img:"images/img-28.webp",
+    id:"sliders", title:"Air Fryer Leftover Turkey Sliders", cat:"turkey", img:"images/img-28.webp", pdf:"https://airfryeronabudget.gumroad.com/l/bscor",
     alt:"Golden leftover turkey sliders with melted swiss and cranberry sauce",
     desc:"The best thing to happen to leftover turkey: melty Swiss, tart cranberry sauce, buttery toasted buns — 12 minutes in the air fryer. About $2.10 a serving (estimated).",
     time:12, cook:9, temp:"380°F", cost:2.10, cal:360, calEst:true, servings:4, badge:"Leftover hero",
@@ -1265,7 +1348,8 @@ function render(){
       '<div class="meta"><span>⏱ <b>'+r.time+' min</b> total</span><span>♨️ <b>'+r.cook+' min</b> @ '+r.temp+'</span><span>🍽 <b>'+r.servings+'</b> servings</span></div>' +
       '<div class="cost-row"><div class="cost"><b>'+money(r.cost)+'</b><span>per serving</span></div>' +
       '<div class="card-actions"><button class="btn btn-outline btn-small" data-add="'+r.id+'">＋ List</button>' +
-      '<button class="btn btn-primary btn-small" data-open="'+r.id+'">Recipe →</button></div></div></div></article>';
+      '<button class="btn btn-primary btn-small" data-open="'+r.id+'">Recipe →</button></div></div>' +
+      (r.pdf ? '<a class="pdf-link" href="'+r.pdf+'" target="_blank" rel="noopener">🖨️ Printable PDF →</a>' : '') + '</div></article>';
   }).join("");
 }
 grid.addEventListener("click", function(e){
