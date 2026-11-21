@@ -247,6 +247,7 @@
           <a class="btn btn-ghost" href="#grocery">Build my grocery list</a>
           <a class="btn btn-ghost" href="#bundles">Printable bundles ↓</a>
         </div>
+        <p style="font-size:13.5px;margin:12px 0 0">or grab the <a href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">free air fryer cheat sheet →</a> — no card needed.</p>
         <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Calorie counts for the holiday recipes are estimates. Your store will vary — the method won't.</p>
       </div>
       <figure class="hero-img" style="margin:0">
@@ -285,12 +286,12 @@
   <!-- PRINTABLE BUNDLES -->
   <section class="wrap" id="bundles">
     <div class="bundle">
-      <h2>🖨️ Get the printable recipe bundles</h2>
-      <p class="intro">Every recipe on this page is free to cook. The printable PDFs are the same recipes, cleaned up for the fridge door — one page per recipe, no ads, no scrolling with greasy hands.</p>
+      <h2>🖨️ 35 dinners under $3.50 a serving — on paper, for $12</h2>
+      <p class="intro">Every recipe on this page is free to cook. The printable PDFs are the same recipes, cleaned up for the fridge door — one page per recipe, no ads, no scrolling with greasy hands. 6 chicken · 4 seafood · 14 veggie · 3 desserts · 2 beef · 2 turkey · 2 holiday · 1 breakfast · 1 pork. That's $0.34 a recipe in the full bundle.</p>
       <div class="bundle-grid">
         <div class="bundle-card">
           <h3>Full bundle — all 35 recipes</h3>
-          <p>Every recipe on the site in one printable pack, including the holiday ones.</p>
+          <p>All 35 recipes in one printable pack, including the holiday ones. The 6 singles are $2.99 each ($17.94) — this covers everything for $12.</p>
           <span class="price">$12</span>
           <a class="btn btn-primary btn-small" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get the bundle</a>
         </div>
@@ -308,7 +309,7 @@
         </div>
         <div class="bundle-card">
           <h3>Air fryer cheat sheet</h3>
-          <p>Times and temps for the foods you cook most. Free — no card needed.</p>
+          <p>Times and temps for the foods you cook most. Free — instant download, no card needed.</p>
           <span class="price">$0</span>
           <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">Get it free</a>
         </div>
@@ -384,11 +385,11 @@
   <section class="wrap">
     <div class="bundle">
       <h2>🖨️ Want these on paper?</h2>
-      <p class="intro">The printable bundles have every recipe on this page, one page each — plus a free air fryer cheat sheet.</p>
+      <p class="intro">All 35 recipes, one page each — 6 chicken, 4 seafood, 14 veggie, 3 desserts and more — plus a free air fryer cheat sheet. Singles are $2.99 each; the full bundle is $12.</p>
       <div class="bundle-grid">
         <div class="bundle-card">
           <h3>Full bundle — all 35 recipes</h3>
-          <p>Every recipe on the site in one printable pack.</p>
+          <p>All 35 recipes in one printable pack — $0.34 a recipe.</p>
           <span class="price">$12</span>
           <a class="btn btn-primary btn-small" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get the bundle</a>
         </div>
@@ -406,7 +407,7 @@
         </div>
         <div class="bundle-card">
           <h3>Air fryer cheat sheet</h3>
-          <p>Times and temps for the foods you cook most. Free.</p>
+          <p>Times and temps for the foods you cook most. Free — instant download.</p>
           <span class="price">$0</span>
           <a class="btn btn-outline btn-small" href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">Get it free</a>
         </div>
@@ -421,6 +422,7 @@
     <details><summary>Can I cook frozen chicken directly?</summary><p>Wings and tenders, yes — add about 50% more time and season after the surface thaws (around the halfway flip). Whole breasts are better thawed so the outside doesn't burn before the center cooks. Always verify 165°F inside.</p></details>
     <details><summary>Why isn't my food crispy?</summary><p>Almost always one of three things: the basket was crowded, the food was wet (pat it dry!), or there was no oil at all. A light spray matters — air alone can't brown a dry coating.</p></details>
     <details><summary>Are these costs real?</summary><p>They're careful estimates from typical U.S. supermarket shelf prices (store brands, family packs), calculated per serving in November 2026. Salmon and fish swing the most by region and season — when they're pricey, swap in the chicken or chickpea recipes that week.</p></details>
+    <details><summary>What's in the printable bundle?</summary><p>Every recipe on this page, formatted one page per recipe for printing. The full bundle covers all 35 recipes for $12 — that's $0.34 a recipe. The free cheat sheet has times and temps for the foods you cook most.</p></details>
     <details><summary>What's the pilot plan for this site?</summary><p>The pilot launched with seven recipes and now has thirty-five. Each week adds 3–4 new ones built on the same overlapping basket, and the cheapest performers stay pinned at the top. If a recipe costs more than $3.50 a serving, it doesn't make the cut.</p></details>
   </section>
 </main>
@@ -1340,7 +1342,7 @@ function render(){
   grid.innerHTML = list.map(function(r){
     var fav = state.favs[r.id] ? " active" : "";
     var favLabel = state.favs[r.id] ? "Remove from saved" : "Save recipe";
-    return '<article class="card">' +
+    return '<article class="card" id="r-'+r.id+'">' +
       '<div class="card-img"><img src="'+r.img+'" alt="'+r.alt+'" />' +
       '<span class="badge'+(r.cost<2?' green':'')+'">'+r.badge+'</span>' +
       '<button class="fav-btn'+fav+'" data-fav="'+r.id+'" aria-label="'+favLabel+'">'+(state.favs[r.id]?"♥":"♡")+'</button></div>' +
@@ -1390,6 +1392,7 @@ function openRecipe(id){
   var r = RECIPES.filter(function(x){return x.id===id;})[0];
   if (!r) return;
   state.current = r; state.servings = r.servings;
+  try { history.replaceState(null, "", "#r-" + id); } catch(e){}
   document.getElementById("dlgImg").src = r.img;
   document.getElementById("dlgImg").alt = r.alt;
   document.getElementById("dlgTitle").textContent = r.title;
@@ -1416,6 +1419,7 @@ function renderIngredients(){
 document.getElementById("servMinus").addEventListener("click", function(){ if (state.servings>1){ state.servings--; renderIngredients(); } });
 document.getElementById("servPlus").addEventListener("click", function(){ if (state.servings<12){ state.servings++; renderIngredients(); } });
 document.getElementById("dlgClose").addEventListener("click", function(){ dlg.close(); });
+dlg.addEventListener("close", function(){ try { history.replaceState(null, "", location.pathname + location.search); } catch(e){} });
 dlg.addEventListener("click", function(e){ if (e.target === dlg) dlg.close(); });
 document.getElementById("addAllBtn").addEventListener("click", function(){ if (state.current) addRecipeToGrocery(state.current.id, state.servings); });
 document.getElementById("copyBtn").addEventListener("click", function(){
@@ -1488,6 +1492,19 @@ document.getElementById("clearGrocery").addEventListener("click", function(){
 
 render();
 renderGrocery();
+
+/* Deep link: #r-<recipe-id> opens that recipe (pins link here, not the homepage) */
+(function deepLink(){
+  var m = (location.hash || "").match(/^#r-([a-z0-9]+)/);
+  if (!m) return;
+  var id = m[1];
+  if (!RECIPES.some(function(r){ return r.id === id; })) return;
+  state.filter = "all"; state.query = "";
+  document.querySelectorAll(".filter-btn[data-filter]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-filter") === "all" ? "true" : "false"); });
+  var si = document.getElementById("searchInput"); if (si) si.value = "";
+  render();
+  setTimeout(function(){ openRecipe(id); }, 50);
+})();
 </script>
 <script src="images/img-1.js"></script>
 <script src="images/img-2.js"></script>
