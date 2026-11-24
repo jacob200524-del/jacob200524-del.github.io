@@ -153,6 +153,11 @@
   .tip-box{margin-top:18px;background:var(--gold-soft);border-radius:12px;padding:14px 16px;font-size:14px}
   .tip-box b{color:var(--gold)}
   .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  /* Bundle CTA inside the recipe dialog (appears on every recipe page) */
+  .dlg-bundle-cta{margin-top:20px;border:1.5px solid var(--accent);border-radius:16px;background:var(--accent-soft);padding:18px 20px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .dlg-bundle-cta b{display:block;font-size:16px;margin-bottom:2px}
+  .dlg-bundle-cta span{font-size:13.5px;color:var(--ink-2)}
+  .dlg-bundle-cta .btn{flex:none}
   /* Lower sections */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:34px 0 8px}
   .panel{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface)}
@@ -248,6 +253,7 @@
           <a class="btn btn-ghost" href="#bundles">Printable bundles ↓</a>
         </div>
         <p style="font-size:13.5px;margin:12px 0 0">or grab the <a href="https://airfryeronabudget.gumroad.com/l/qoklp" target="_blank" rel="noopener">free air fryer cheat sheet →</a> — no card needed.</p>
+        <p style="font-size:13.5px;margin:8px 0 0"><b>Free PDF:</b> <a href="#" id="freePdfBtn">5 Cheap Air Fryer Dinners + Shopping List ↓</a> — 5 dinners, one shopping trip, no email needed.</p>
         <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0">*Cost estimates use typical U.S. supermarket prices, Nov 2026. Calorie counts for the holiday recipes are estimates. Your store will vary — the method won't.</p>
       </div>
       <figure class="hero-img" style="margin:0">
@@ -470,6 +476,13 @@
         <button class="btn btn-ghost btn-small" id="copyFullBtn">📋 Copy full recipe</button>
         <button class="btn btn-ghost btn-small" id="copyBtn">Copy ingredients</button>
         <span style="font-size:12px;color:var(--muted);align-self:center">*Nutrition is an estimate per serving.</span>
+      </div>
+      <div class="dlg-bundle-cta">
+        <div>
+          <b>Love this one? Get all 35 recipes on paper.</b>
+          <span>One page per recipe, no ads, no greasy-phone scrolling — the full printable bundle for $12.</span>
+        </div>
+        <a class="btn btn-primary" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get all 35 for $12</a>
       </div>
     </div>
   </div>
@@ -2140,6 +2153,17 @@ document.getElementById("clearGrocery").addEventListener("click", function(){
   state.grocery = {}; renderGrocery(); toast("Grocery list cleared.");
 });
 
+/* Free PDF download (images/free-5-dinners.js data URI, same pattern as the images) */
+document.getElementById("freePdfBtn").addEventListener("click", function(e){
+  e.preventDefault();
+  if (!window.FREE_PDF){ toast("Still loading the PDF \u2014 try again in a second."); return; }
+  var a = document.createElement("a");
+  a.href = window.FREE_PDF;
+  a.download = "5-cheap-air-fryer-dinners.pdf";
+  document.body.appendChild(a); a.click(); a.remove();
+  toast("Your free PDF is downloading \u2193");
+});
+
 render();
 renderGrocery();
 
@@ -2219,6 +2243,7 @@ renderGrocery();
 <script src="images/img-61.js"></script>
 <script src="images/img-62.js"></script>
 <script src="images/img-63.js"></script>
+<script src="images/free-5-dinners.js"></script>
 <script>
 (function(){var M={"images/img-1.webp":window.IMG1,"images/img-2.webp":window.IMG2,"images/img-3.webp":window.IMG3,"images/img-4.webp":window.IMG4,"images/img-5.webp":window.IMG5,"images/img-6.webp":window.IMG6,"images/img-7.webp":window.IMG7,"images/img-8.webp":window.IMG8,"images/img-9.webp":window.IMG9,"images/img-10.webp":window.IMG10,"images/img-11.webp":window.IMG11,"images/img-12.webp":window.IMG12,"images/img-13.webp":window.IMG13,"images/img-14.webp":window.IMG14,"images/img-15.webp":window.IMG15,"images/img-16.webp":window.IMG16,"images/img-17.webp":window.IMG17,"images/img-18.webp":window.IMG18,"images/img-19.webp":window.IMG19,"images/img-20.webp":window.IMG20,"images/img-21.webp":window.IMG21,"images/img-22.webp":window.IMG22,"images/img-23.webp":window.IMG23,"images/img-24.webp":window.IMG24,"images/img-25.webp":window.IMG25,"images/img-26.webp":window.IMG26,"images/img-27.webp":window.IMG27,"images/img-28.webp":window.IMG28,"images/img-29.webp":window.IMG29,"images/img-30.webp":window.IMG30,"images/img-31.webp":window.IMG31,"images/img-32.webp":window.IMG32,"images/img-33.webp":window.IMG33,"images/img-34.webp":window.IMG34,"images/img-35.webp":window.IMG35,"images/img-36.webp":window.IMG36,"images/img-37.webp":window.IMG37,"images/img-38.webp":window.IMG38,"images/img-39.webp":window.IMG39,"images/img-40.webp":window.IMG40,"images/img-41.webp":window.IMG41,"images/img-42.webp":window.IMG42,"images/img-43.webp":window.IMG43,"images/img-44.webp":window.IMG44,"images/img-45.webp":window.IMG45,"images/img-46.webp":window.IMG46,"images/img-47.webp":window.IMG47,"images/img-48.webp":window.IMG48,"images/img-49.webp":window.IMG49,"images/img-50.webp":window.IMG50,"images/img-51.webp":window.IMG51,"images/img-52.webp":window.IMG52,"images/img-53.webp":window.IMG53,"images/img-54.webp":window.IMG54,"images/img-55.webp":window.IMG55,"images/img-56.webp":window.IMG56,"images/img-57.webp":window.IMG57,"images/img-58.webp":window.IMG58,"images/img-59.webp":window.IMG59,"images/img-60.webp":window.IMG60,"images/img-61.webp":window.IMG61,"images/img-62.webp":window.IMG62,"images/img-63.webp":window.IMG63};document.querySelectorAll("img").forEach(function(el){var s=el.getAttribute("src");if(s&&M[s])el.src=M[s];});if(window.RECIPES){RECIPES.forEach(function(r){if(M[r.img])r.img=M[r.img];});}})();
 </script>
