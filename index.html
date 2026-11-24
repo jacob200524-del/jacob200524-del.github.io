@@ -33,7 +33,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{margin:0;padding-bottom:64px;font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3,.serif{font-family:"Lora",Georgia,serif;line-height:1.15;letter-spacing:-.01em}
   a{color:var(--accent)}
   button,[role="button"],select,summary,input:not([type="checkbox"]){min-height:44px}
@@ -130,7 +130,7 @@
   .dialog-hero{position:relative}
   .dialog-hero img{width:100%;height:300px;object-fit:cover}
   .dialog-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#111;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-  .dialog-body{padding:22px 24px 26px}
+  .dialog-body{padding:22px 24px 92px}
   .dialog-body h2{margin:0 0 6px;font-size:30px;padding-right:30px}
   .dialog-body .sub{color:var(--muted);margin:0 0 16px}
   .fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 18px}
@@ -142,7 +142,7 @@
   .scale-btns{display:flex;gap:6px}
   .scale-btns button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-weight:800;font-size:16px}
   .scale-num{font-weight:800;font-size:18px;min-width:70px;text-align:center}
-  .two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:24px}
+  .two-col{display:grid;grid-template-columns:1fr;gap:24px}
   .two-col h3{margin:0 0 10px;font-size:18px}
   .ing-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
   .ing-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;border-bottom:1px dashed var(--line);padding-bottom:8px}
@@ -153,11 +153,16 @@
   .tip-box{margin-top:18px;background:var(--gold-soft);border-radius:12px;padding:14px 16px;font-size:14px}
   .tip-box b{color:var(--gold)}
   .dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-  /* Bundle CTA inside the recipe dialog (appears on every recipe page) */
-  .dlg-bundle-cta{margin-top:20px;border:1.5px solid var(--accent);border-radius:16px;background:var(--accent-soft);padding:18px 20px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  /* Bundle CTA inside the recipe dialog — between Ingredients and Method */
+  .dlg-bundle-cta{margin:0;border:1.5px solid var(--accent);border-radius:16px;background:var(--accent-soft);padding:18px 20px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
   .dlg-bundle-cta b{display:block;font-size:16px;margin-bottom:2px}
   .dlg-bundle-cta span{font-size:13.5px;color:var(--ink-2)}
   .dlg-bundle-cta .btn{flex:none}
+  /* Fixed bundle bar — page bar + dialog bar (dialog is top layer, so its bar paints above the backdrop) */
+  .bundle-bar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:10px 16px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;font-size:16px;box-shadow:0 -4px 18px rgba(0,0,0,.18)}
+  .bundle-bar:hover{background:var(--accent-2);color:#fff}
+  .bundle-bar .bb-short{display:none}
+  @media (max-width:560px){.bundle-bar{font-size:14.5px;min-height:52px}.bundle-bar .bb-full{display:none}.bundle-bar .bb-short{display:inline}}
   /* Lower sections */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:34px 0 8px}
   .panel{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface)}
@@ -192,7 +197,7 @@
   details p{margin:0 0 14px;color:var(--ink-2);font-size:14.5px}
   footer{border-top:1px solid var(--line);margin-top:36px;padding:26px 0 40px;color:var(--muted);font-size:13.5px}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,80px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:60;transition:transform .25s ease;box-shadow:var(--shadow);max-width:calc(100% - 32px);text-align:center}
+  .toast{position:fixed;left:50%;bottom:78px;transform:translate(-50%,160px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:60;transition:transform .25s ease;box-shadow:var(--shadow);max-width:calc(100% - 32px);text-align:center}
   .toast.show{transform:translate(-50%,0)}
   .no-results{grid-column:1/-1;text-align:center;padding:44px 20px;border:1px dashed var(--line);border-radius:var(--radius);color:var(--muted)}
   @media (max-width:900px){
@@ -468,6 +473,13 @@
       </div>
       <div class="two-col">
         <div><h3>Ingredients</h3><ul class="ing-list" id="dlgIng"></ul></div>
+        <div class="dlg-bundle-cta">
+          <div>
+            <b>Love this one? Get all 35 recipes on paper.</b>
+            <span>One page per recipe, no ads, no greasy-phone scrolling — the full printable bundle for $12.</span>
+          </div>
+          <a class="btn btn-primary" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get all 35 recipes — $12 Bundle</a>
+        </div>
         <div><h3>Method</h3><ol class="steps" id="dlgSteps"></ol>
           <div class="tip-box" id="dlgTip"></div>
         </div>
@@ -477,18 +489,13 @@
         <button class="btn btn-ghost btn-small" id="copyBtn">Copy ingredients</button>
         <span style="font-size:12px;color:var(--muted);align-self:center">*Nutrition is an estimate per serving.</span>
       </div>
-      <div class="dlg-bundle-cta">
-        <div>
-          <b>Love this one? Get all 35 recipes on paper.</b>
-          <span>One page per recipe, no ads, no greasy-phone scrolling — the full printable bundle for $12.</span>
-        </div>
-        <a class="btn btn-primary" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener">Get all 35 for $12</a>
-      </div>
     </div>
   </div>
+  <a class="bundle-bar dlg-bar" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener"><span class="bb-full">Get All 35 Recipes — $12 Bundle →</span><span class="bb-short">All 35 Recipes · $12 →</span></a>
 </dialog>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a class="bundle-bar" id="pageBundleBar" href="https://airfryeronabudget.gumroad.com/l/dgbudg" target="_blank" rel="noopener"><span class="bb-full">Get All 35 Recipes — $12 Bundle →</span><span class="bb-short">All 35 Recipes · $12 →</span></a>
 
 <script>
 var RECIPES = [
